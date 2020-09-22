@@ -6,6 +6,42 @@
 
 <main class="page-main">
 
+   <h1 class="visually-hidden"></h1> 
+   <!-- нужно поисковикам, мы не отображаем -->
+   <section class=""> 
+      <!-- любой отдельный модуль на сайте со своим подзаголовком -->
+      <header class=""></header> 
+      <!-- хедер этого модуля -->
+      <h2 class="visually-hidden"></h2> 
+      <!-- название этого модуля -->
+   </section>
+
+   <section class="">
+      <div class=""></div> 
+      <!-- обертка для этого модуля -->
+      <ul class="">
+         <li class="">
+           <p class="">Рандом текст</p>
+         </li>
+       </ul>
+   </section> 
+   <!-- другой модуль сайта -->
+
+   <section class="">
+      <div class=""></div> 
+      <!-- обертка для этого модуля -->
+      <table class="list">
+         <tr>
+           <td class="value">
+             цифра
+           </td>
+           <td class="field">
+             значение
+           </td>
+         </tr>
+       </table>
+   </section>
+
 </main>
 
 <%= _.template(require('./../includes/footer.html'))(data) %>
