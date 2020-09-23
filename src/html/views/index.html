@@ -78,6 +78,46 @@
       </div>
    </section>
 
+   <section class="offer">
+      <div class="offer__wrapper slider">
+      <div class="offer__list slider__list">
+         <div class="offer__item slider__item">
+
+         </div>
+      </div>
+      </div>
+   </section>
+</main>
+
+   <footer class="page-footer">
+      <div class="page-footer__wrapper">
+         <div class="page-footer__contacts contacts">
+            <b class="contacts__title">Остались вопросы? <br/> Свяжитесь с нами!</b>
+          <p class="contacts__text">
+            Звоните:<br>
+            <a class="contacts__phone" href="tel:+78125556666">
+              <span class="contacts__phone-mobile"></span> +7 (812) 555-66-66
+            </a>
+          </p>
+          <p class="contacts__text">
+            Пишите:<br>
+            <a class="contacts__link" href="mailto:mail@htmlacademy.ru">
+              <span class="contacts__phone-mobile"></span> mail@htmlacademy.ru
+            </a>
+          </p>
+          <p class="contacts__text">
+            Приезжайте в гости:<br>
+            <a class="contacts__address" href="#">
+              <span class="contacts__phone-mobile"></span> ул. Большая <br/> Конюшенная, 19/8
+            </a>
+          </p>
+         </div>
+         <div class="page-footer__map">
+            Карта
+         </div>
+      </div>
+   </footer>
+
    <section>
       <form method="POST" action=".">
          <p>
@@ -89,7 +129,5 @@
          </p>
       </form>
    </section>
-
-</main>
 
 <%= _.template(require('./../includes/footer.html'))(data) %>
