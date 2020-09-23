@@ -42,6 +42,54 @@
        </table>
    </section>
 
+   <section class="advantages">
+      <div class="advantages__wrapper">
+      <h2 class="visually-hidden">Наши преимущества</h2>
+      <ul class="advantages__list">
+         <li class="advantages__item">
+            <h3 class="advantages__title">Поднимает настроение</h3>
+            <p class="advantages__description">Приложение позволит вам победить оспеннюю хандру и бла</p>
+         </li>
+         <li class="advantages__item">
+            <h3 class="advantages__title">Меняет мир вокруг</h3>
+            <p class="advantages__description">Ну реально все изменяет вообще</p>
+         </li>
+         <li class="advantages__item">
+            <h3 class="advantages__title">Заводит новых друзей</h3>
+            <p class="advantages__description">И старых заводит. Довольно эротичное приложение.</p>
+         </li>
+      </ul>
+   </div> 
+   </section>
+
+   <section class="reviews">
+      <div class="reviews__wrapper slider">
+         <div class="reviews__list slider__list">
+         <blockquote class="reviews__item slider__item">
+            <cite class="reviews__author-name">Николай Петров</cite>
+            <p class="reviews__text">Это приложение перевернуло мой мир, я нашел собаку, жену и ребенка!</p>
+         </blockquote>
+         </div> 
+         <p class="reviews__toggles slider__toggles">
+            <button class="slider__toggle" type="button">1</button>
+            <button class="slider__toggle" type="button">2</button>
+            <button class="slider__toggle" type="button">3</button>
+          </p>
+      </div>
+   </section>
+
+   <section>
+      <form method="POST" action=".">
+         <p>
+                 <label for="id-name-field">Ваше имя</label>
+                 <input type="text" name="name-field" id="id-name-field" />
+         </p>
+         <p>
+                 <button type="submit">Отправить</button>
+         </p>
+      </form>
+   </section>
+
 </main>
 
 <%= _.template(require('./../includes/footer.html'))(data) %>
