@@ -16,30 +16,34 @@
       <!-- название этого модуля -->
    </section>
 
-   <section class="">
-      <div class=""></div> 
-      <!-- обертка для этого модуля -->
-      <ul class="">
-         <li class="">
-           <p class="">Рандом текст</p>
-         </li>
-       </ul>
-   </section> 
-   <!-- другой модуль сайта -->
+   <section class="hero">
+      <div class="hero__wrapper">
+         <p class="hero__title">
+            Взгляните на жизнь иначе!
+         </p>
+      </div>
+   </section>
 
-   <section class="">
-      <div class=""></div> 
-      <!-- обертка для этого модуля -->
-      <table class="list">
-         <tr>
-           <td class="value">
-             цифра
-           </td>
-           <td class="field">
-             значение
-           </td>
-         </tr>
-       </table>
+   <section class="download">
+      <div class="download__wrapper">
+         <button class="download__button">
+            Скачать приложение
+         </button>
+         <div class="download__socials">
+         </div>
+         <p class="download__description">
+            Доступно для iPhone, iPad, Android, <br/> Windows Phone, OS X, Windows 8 
+         </p>
+      </div>
+   </section>
+
+   <section class="lead">
+      <div class="lead__wrapper">
+         <p class="lead__title">
+            Устали от серости мегаполиса?
+            Нам есть что вам предложить!
+         </p>
+      </div>
    </section>
 
    <section class="advantages">
@@ -71,20 +75,47 @@
          </blockquote>
          </div> 
          <p class="reviews__toggles slider__toggles">
-            <button class="slider__toggle" type="button">1</button>
-            <button class="slider__toggle" type="button">2</button>
-            <button class="slider__toggle" type="button">3</button>
+            <button class="slider__toggle" type="button">○</button>
+            <button class="slider__toggle" type="button">○</button>
+            <button class="slider__toggle" type="button">○</button>
           </p>
       </div>
    </section>
 
    <section class="offer">
       <div class="offer__wrapper slider">
-      <div class="offer__list slider__list">
-         <div class="offer__item slider__item">
-
+         <div class="offer__list slider__list">
+            <div class="offer__item slider__item">
+              <header class="offer__header"> 
+               <div class="offer__title">
+                  [stripe]
+                  Стандарт
+               </div>
+               <div class="offer__price">
+                  3,99 USD
+               </div>
+              </header>
+              <div class="offer__features">
+                 <ul class="offer__list">
+                    <li class="offer__item">
+                       <p class="offer__feature">Розовый фильтр</p>
+                    </li>
+                    <li class="offer__item">
+                     <p class="offer__feature">Смайлики</p>
+                    </li>
+                    <li class="offer__item">
+                     <p class="offer__feature">Комментарии</p>
+                    </li>
+                 </ul>
+              </div>
+              
+            </div>
          </div>
-      </div>
+         <p class="offer__toggles slider__toggles">
+            <button class="slider__toggle" type="button">○</button>
+            <button class="slider__toggle" type="button">○</button>
+            <button class="slider__toggle" type="button">○</button>
+          </p>
       </div>
    </section>
 </main>
@@ -115,19 +146,64 @@
          <div class="page-footer__map">
             Карта
          </div>
+         <div class="page-footer__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy"></a>
+              </li>
+            </ul>
+          </div>
+          <div class="page-footer__copyright copyright">
+            <b class="copyright__text">Разработано:</b>
+            <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive"></a>
+          </div>
       </div>
    </footer>
 
-   <section>
+<%= _.template(require('./../includes/footer.html'))(data) %>
+
+<!-- 
+   <section class="">
+      <div class=""></div> 
+      <table class="list">
+         <caption>3.99 USD</caption>
+         <tr>
+           <td class="value">
+             цифра
+           </td>
+           <td class="field">
+             значение
+           </td>
+         </tr>
+       </table>
+   </section> -->
+
+
+   <!-- <section>
       <form method="POST" action=".">
          <p>
-                 <label for="id-name-field">Ваше имя</label>
-                 <input type="text" name="name-field" id="id-name-field" />
+            <label for="id-name-field">Ваше имя</label>
+            <input type="text" name="name-field" id="id-name-field" />
          </p>
          <p>
-                 <button type="submit">Отправить</button>
+            <button type="submit">Отправить</button>
          </p>
       </form>
-   </section>
+   </section> -->
 
-<%= _.template(require('./../includes/footer.html'))(data) %>
+
+<!-- 
+   <section class="">
+      <div class=""></div> 
+      <ul class="">
+         <li class="">
+           <p class="">Рандом текст</p>
+         </li>
+       </ul>
+   </section>  -->
