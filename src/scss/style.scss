@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 
-#map {
-  height: 400px;
-  width: 400px;
-}
-
 /* Указываем box sizing */
 *,
 *::before,
@@ -42,6 +37,7 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  font-family: "Open Sans";
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
@@ -74,9 +70,89 @@ select {
   font: inherit;
 }
 
-// ==========================================================================
-// Блок комментариев для раздела
-// ==========================================================================
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+// ============================================
+// Заголовки
+// ============================================
+
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+}
+
+h4 {
+}
+
+// ============================================
+// Хедер
+// ============================================
+
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  background-color: #293746;
+  text-transform: uppercase;
+}
+
+.page-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.main-nav__toggle {
+  color: red;
+  background-color: darkgreen;
+  border: none;
+  outline: none;
+}
+
+.main-nav__toggle-icon {
+  color: red;
+  background-color: red;
+}
+// ============================================
+// Навигация
+// ============================================
+
+.main-nav__list {
+  width: 100%;
+  min-width: 320px;
+  font-size: 16px;
+}
+
+.main-list__item a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.main-list__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 66px;
+  box-shadow: 0 0 1px rgb(255, 255, 255);
+}
+
+// ============================================
+// Хедер
+// ============================================
 
 // Блок комментариев для подраздела
 // ==========================================================================

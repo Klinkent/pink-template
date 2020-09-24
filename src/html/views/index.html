@@ -5,31 +5,41 @@
 <%= _.template(require('./../includes/header.html'))(data) %>
 
 <main class="page-main">
-
+   <section class="hero">
+      <div class="hero__wrapper">
+         <h2 class="visually-hidden">Воодушевляющий текст о нашем приложении в заголовоке</h2>
+         <p class="hero__title">
+            Взгляните на жизнь иначе!
+         </p>
+      </div>
+   </section>
    <section class="download">
       <div class="download__wrapper">
          <h2 class="visually-hidden">Скачать</h2>
          <a href='https://www.apple.com/ru/ios/app-store/' class="download__button">
-            Скачать приложение
+         Скачать приложение
          </a>
          <div class="download__socials">
-            <!-- сделать списком -->
-            <a href='https://www.apple.com/ru/ios/app-store/'>
-               <img src=''>
-            </a>
-            <a href='https://www.apple.com/ru/ios/app-store/'>
-               <img src=''>
-            </a>
-            <a href='https://www.apple.com/ru/ios/app-store/'>
-               <img src=''>
-            </a>
+            <ul class="download__socials-list">
+               <li><a href='https://www.apple.com/ru/ios/app-store/'>
+                  <img src='../../img/logo-apple.svg'>
+                  </a> 
+               </li>
+               <li><a href='https://play.google.com/store/apps?hl=en_US'>
+                  <img src='../../img/logo-android.svg'>
+                  </a>
+               </li>
+               <li><a href='https://www.microsoft.com/ru-ru/store/apps'>
+                  <img src='../../img/logo-microsoft.svg'>
+                  </a>
+               </li>
+            </ul>
          </div>
          <p class="download__description">
             Доступно для iPhone, iPad, Android, <br/> Windows Phone, OS X, Windows 8 
          </p>
       </div>
    </section>
-
    <section class="lead">
       <h2 class="visually-hidden">Слоган</h2>
       <div class="lead__wrapper">
@@ -39,151 +49,135 @@
          </p>
       </div>
    </section>
-
    <section class="advantages">
       <div class="advantages__wrapper">
-      <h2 class="visually-hidden">Наши преимущества</h2>
-      <ul class="advantages__list">
-         <li class="advantages__item">
-            <h3 class="advantages__title">Поднимает настроение</h3>
-            <p class="advantages__description">Приложение позволит вам победить оспеннюю хандру и бла</p>
-         </li>
-         <li class="advantages__item">
-            <h3 class="advantages__title">Меняет мир вокруг</h3>
-            <p class="advantages__description">Ну реально все изменяет вообще</p>
-         </li>
-         <li class="advantages__item">
-            <h3 class="advantages__title">Заводит новых друзей</h3>
-            <p class="advantages__description">И старых заводит. Довольно эротичное приложение.</p>
-         </li>
-      </ul>
-   </div> 
+         <h2 class="visually-hidden">Наши преимущества</h2>
+         <ul class="advantages__list">
+            <li class="advantages__item">
+               <h3 class="advantages__title">Поднимает настроение</h3>
+               <p class="advantages__description">Приложение позволит вам победить оспеннюю хандру и бла</p>
+            </li>
+            <li class="advantages__item">
+               <h3 class="advantages__title">Меняет мир вокруг</h3>
+               <p class="advantages__description">Ну реально все изменяет вообще</p>
+            </li>
+            <li class="advantages__item">
+               <h3 class="advantages__title">Заводит новых друзей</h3>
+               <p class="advantages__description">И старых заводит. Довольно эротичное приложение.</p>
+            </li>
+         </ul>
+      </div>
    </section>
-
    <section class="reviews">
-      <!-- у всех секций должен быть h2 -->
       <div class="reviews__wrapper slider">
          <h2 class="visually-hidden">Обзоры</h2>
-
          <div class="reviews__list slider__list">
-         <blockquote class="reviews__item slider__item">
-            <cite class="reviews__author-name">Николай Петров</cite>
-            <p class="reviews__text">Это приложение перевернуло мой мир, я нашел собаку, жену и ребенка!</p>
-         </blockquote>
+            <blockquote class="reviews__item slider__item">
+               <cite class="reviews__author-name">Николай Петров</cite>
+               <p class="reviews__text">Это приложение перевернуло мой мир, я нашел собаку, жену и ребенка!</p>
+            </blockquote>
          </div>
-         <!-- возможно, нам не нужны p -->
          <p class="reviews__toggles slider__toggles">
             <button class="slider__toggle" type="button">○</button>
             <button class="slider__toggle" type="button">○</button>
             <button class="slider__toggle" type="button">○</button>
-          </p>
+         </p>
       </div>
    </section>
-
-
-   <!-- сначала <a href=""></a> -->
    <section class="offer">
       <h2 class="visually-hidden">Наши тарифы</h2>
       <div class="offer__wrapper slider">
          <div class="offer__list slider__list">
             <div class="offer__item slider__item">
-              <header class="offer__header"> 
-               <div class="offer__title">
-                  [before::stripe]
-                  Стандарт
+               <header class="offer__header">
+                  <div class="offer__title">
+                     [before::stripe]
+                     Стандарт
+                  </div>
+                  <div class="offer__price">
+                     3,99 USD
+                  </div>
+               </header>
+               <div class="offer__features">
+                  <ul class="offer__list">
+                     <li class="offer__item">
+                        <p class="offer__feature">Розовый фильтр</p>
+                     </li>
+                     <li class="offer__item">
+                        <p class="offer__feature">Смайлики</p>
+                     </li>
+                     <li class="offer__item">
+                        <p class="offer__feature">Комментарии</p>
+                     </li>
+                  </ul>
                </div>
-               <div class="offer__price">
-                  3,99 USD
-               </div>
-              </header>
-              <div class="offer__features">
-                 <ul class="offer__list">
-                    <li class="offer__item">
-                       <p class="offer__feature">Розовый фильтр</p>
-                    </li>
-                    <li class="offer__item">
-                     <p class="offer__feature">Смайлики</p>
-                    </li>
-                    <li class="offer__item">
-                     <p class="offer__feature">Комментарии</p>
-                    </li>
-                 </ul>
-              </div>
-              
             </div>
          </div>
          <p class="offer__toggles slider__toggles">
             <button class="slider__toggle" type="button">○</button>
             <button class="slider__toggle" type="button">○</button>
             <button class="slider__toggle" type="button">○</button>
-          </p>
+         </p>
       </div>
    </section>
 </main>
 <!-- 
-
-по поводу мобильников
-мобильник для мобильного вида отрисовывается сам по себе как отдельный блок
-
-а остальные мобильники появляются при медиазапросах
-для остальных интерфейсов  -->
-
-   <footer class="page-footer">
-      <div class="page-footer__wrapper">
-         <div class="page-footer__contacts contacts">
-            <b class="contacts__title">Остались вопросы? <br/> Свяжитесь с нами!</b>
-          <p class="contacts__text">
+   по поводу мобильников
+   мобильник для мобильного вида отрисовывается сам по себе как отдельный блок
+   
+   а остальные мобильники появляются при медиазапросах
+   для остальных интерфейсов  -->
+<footer class="page-footer">
+   <div class="page-footer__wrapper">
+      <div class="page-footer__contacts contacts">
+         <b class="contacts__title">Остались вопросы? <br/> Свяжитесь с нами!</b>
+         <p class="contacts__text">
             Звоните:<br>
             <a class="contacts__phone" href="tel:+78125556666">
-              <span class="contacts__phone-mobile"></span> +7 (812) 555-66-66
+            <span class="contacts__phone-mobile"></span> +7 (812) 555-66-66
             </a>
-          </p>
-          <p class="contacts__text">
+         </p>
+         <p class="contacts__text">
             Пишите:<br>
             <a class="contacts__link" href="mailto:mail@htmlacademy.ru">
-              <span class="contacts__email">mail@htmlacademy.ru</span> 
+            <span class="contacts__email">mail@htmlacademy.ru</span> 
             </a>
-          </p>
-          <p class="contacts__text">
+         </p>
+         <p class="contacts__text">
             Приезжайте в гости:<br>
             <a class="contacts__address" href="#">
-              <address class="contacts__address-text"> ул. Большая Конюшенная, 19/8</address>
-            </a>
-          </p>
-         </div>
-         <div class="page-footer__map">
-
-            <div id="floating-panel">
-               карта
-               <input id="address" type="textbox" value="Sydney, NSW" />
-               <input id="submit" type="button" value="Geocode" />
-             </div>
-             <div id="map">карта</div>
-
-         </div>
-         <div class="page-footer__social social">
-            <ul class="social__list">
-              <li class="social__item">
-                <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"></a>
-              </li>
-              <li class="social__item">
-                <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"></a>
-              </li>
-              <li class="social__item">
-                <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy"></a>
-              </li>
-            </ul>
-          </div>
-          <div class="page-footer__copyright copyright">
-            <b class="copyright__text">Разработано:</b>
-            <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive"></a>
-          </div>
+         <address class="contacts__address-text"> ул. Большая Конюшенная, 19/8</address>
+         </a>
+         </p>
       </div>
-   </footer>
-
+      <div class="page-footer__map">
+            карта
+         <div id="map">карта</div>
+      </div>
+      <div class="page-footer__social social">
+         <ul class="social__list">
+            <li class="social__item">
+               <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"></a>
+            </li>
+            <li class="social__item">
+               <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"></a>
+            </li>
+            <li class="social__item">
+               <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy"></a>
+            </li>
+         </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+         <b class="copyright__text">Разработано:</b>
+         <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive"></a>
+      </div>
+   </div>
+</footer>
+   
+<!-- 
    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFcFFEb4szDrh2nDCQGDCSjT2YaRc4wU8&"
-    type="text/javascript"></script>
+    type="text/javascript"></script> -->
 
    <!-- футер выглядит иначе -->
    <!-- туда входит не только карта, но и все, что находится внизу сайта, включая мобильную версию -->
