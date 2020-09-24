@@ -10,27 +10,38 @@
   </head>
   <body>
     <header class="page-header">
-      <!-- контейнер     ё -->
+      <div class='page-header__wrapper'>
      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="" width="226" height="30" alt="PINK">
+        <img class="page-header__logo-image" src="" alt="PINK">
       </a> 
       <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <!-- width height нахуй -->
+      </div>
+
+      
+      <section class="hero">
+        <div class="hero__wrapper">
+           <h2 class="visually-hidden">Воодушевляющий текст о нашем приложении в заголовоке</h2>
+           <p class="hero__title">
+              Взгляните на жизнь иначе!
+           </p>
+        </div>
+     </section>
+
+
       <!-- нав положить в хедер -->
       <nav class="main-nav">
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <!-- site зампенить на мейн -->
-            <li class="site-list__item site-list__item--active">
+          <ul class="main-nav__list main-list">
+            <li class="main-list__item main-list__item--active">
               <a href="#">Главная</a>
             </li>
-            <li class="site-list__item">
+            <li class="main-list__item">
               <a href="photo.html">Фотографии</a>
             </li>
-            <li class="site-list__item">
+            <li class="main-list__item">
               <a href="form.html">Конкурс</a>
             </li>
-            <li class="site-list__item">
+            <li class="main-list__item">
               <a href="#">HTML ACADEMY</a>
             </li>
           </ul>

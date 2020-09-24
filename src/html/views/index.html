@@ -6,21 +6,12 @@
 
 <main class="page-main">
 
-   <!-- это часть хедера -->
-   <section class="hero">
-      <div class="hero__wrapper">
-         <p class="hero__title">
-            Взгляните на жизнь иначе!
-         </p>
-      </div>
-   </section>
-
    <section class="download">
       <div class="download__wrapper">
-         <!-- это ссылка которая выглядит как кнопка  -->
-         <button class="download__button">
-            <a href='https://www.apple.com/ru/ios/app-store/'>Скачать приложение</a>
-         </button>
+         <h2 class="visually-hidden">Скачать</h2>
+         <a href='https://www.apple.com/ru/ios/app-store/' class="download__button">
+            Скачать приложение
+         </a>
          <div class="download__socials">
             <!-- сделать списком -->
             <a href='https://www.apple.com/ru/ios/app-store/'>
@@ -40,6 +31,7 @@
    </section>
 
    <section class="lead">
+      <h2 class="visually-hidden">Слоган</h2>
       <div class="lead__wrapper">
          <p class="lead__title">
             Устали от серости мегаполиса?
@@ -71,6 +63,8 @@
    <section class="reviews">
       <!-- у всех секций должен быть h2 -->
       <div class="reviews__wrapper slider">
+         <h2 class="visually-hidden">Обзоры</h2>
+
          <div class="reviews__list slider__list">
          <blockquote class="reviews__item slider__item">
             <cite class="reviews__author-name">Николай Петров</cite>
@@ -89,6 +83,7 @@
 
    <!-- сначала <a href=""></a> -->
    <section class="offer">
+      <h2 class="visually-hidden">Наши тарифы</h2>
       <div class="offer__wrapper slider">
          <div class="offer__list slider__list">
             <div class="offer__item slider__item">
@@ -150,17 +145,21 @@
             </a>
           </p>
           <p class="contacts__text">
-             <!-- использовать address -->
             Приезжайте в гости:<br>
             <a class="contacts__address" href="#">
-                <!-- можно без br -->
-              <span class="contacts__phone-mobile"></span> ул. Большая <br/> Конюшенная, 19/8
+              <address class="contacts__address-text"> ул. Большая Конюшенная, 19/8</address>
             </a>
           </p>
          </div>
          <div class="page-footer__map">
-            <!-- айфрейм -->
-            Карта
+
+            <div id="floating-panel">
+               карта
+               <input id="address" type="textbox" value="Sydney, NSW" />
+               <input id="submit" type="button" value="Geocode" />
+             </div>
+             <div id="map">карта</div>
+
          </div>
          <div class="page-footer__social social">
             <ul class="social__list">
@@ -181,6 +180,10 @@
           </div>
       </div>
    </footer>
+
+   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFcFFEb4szDrh2nDCQGDCSjT2YaRc4wU8&"
+    type="text/javascript"></script>
 
    <!-- футер выглядит иначе -->
    <!-- туда входит не только карта, но и все, что находится внизу сайта, включая мобильную версию -->
