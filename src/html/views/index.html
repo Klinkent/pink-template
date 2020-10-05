@@ -5,48 +5,50 @@
 <%= _.template(require('./../includes/header.html'))(data) %>
 
 <main class="page-main">
+   
    <section class="hero">
+      <p class="hero__title">
+         Взгляните на жизнь <br>иначе!
+      </p>
       <div class="hero__wrapper">
-         <h2 class="visually-hidden">Воодушевляющий текст о нашем приложении в заголовоке</h2>
-         <p class="hero__title">
-            Взгляните на жизнь иначе!
-         </p>
+         <h2 class="visually-hidden">Воодушевляющий текст о приложении в заголовке</h2>
+         
+
+         <section class="download">
+            <div class="download__wrapper">
+               <h2 class="visually-hidden">Скачать</h2>
+               <a href='https://www.apple.com/ru/ios/app-store/' class="button download__button">
+               Скачать приложение
+               </a>
+               <div class="download__socials">
+                  <ul class="download__socials-list">
+                     <li><a href='https://www.apple.com/ru/ios/app-store/' class="download__icon download__icon--apple">
+                        </a> 
+                     </li>
+                     <li><a href='https://play.google.com/store/apps?hl=en_US' class="download__icon download__icon--google">
+                        </a>
+                     </li>
+                     <li><a href='https://www.microsoft.com/ru-ru/store/apps' class="download__icon download__icon--microsoft">
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <p class="download__description">
+                  Доступно для iPhone, iPad, Android, <br/> Windows Phone, OS X, Windows 8 
+               </p>
+            </div>
+         </section>
       </div>
+
+      
+
    </section>
-   <section class="download">
-      <div class="download__wrapper">
-         <h2 class="visually-hidden">Скачать</h2>
-         <a href='https://www.apple.com/ru/ios/app-store/' class="download__button">
-         Скачать приложение
-         </a>
-         <div class="download__socials">
-            <ul class="download__socials-list">
-               <li><a href='https://www.apple.com/ru/ios/app-store/'>
-                  <img src='../../img/logo-apple.svg'>
-                  </a> 
-               </li>
-               <li><a href='https://play.google.com/store/apps?hl=en_US'>
-                  <img src='../../img/logo-android.svg'>
-                  </a>
-               </li>
-               <li><a href='https://www.microsoft.com/ru-ru/store/apps'>
-                  <img src='../../img/logo-microsoft.svg'>
-                  </a>
-               </li>
-            </ul>
-         </div>
-         <p class="download__description">
-            Доступно для iPhone, iPad, Android, <br/> Windows Phone, OS X, Windows 8 
-         </p>
-      </div>
-   </section>
+
    <section class="lead">
       <h2 class="visually-hidden">Слоган</h2>
       <div class="lead__wrapper">
-         <p class="lead__title">
             Устали от серости мегаполиса?
-            Нам есть что вам предложить!
-         </p>
+         <p class="lead__subtitle">Нам есть что вам предложить!</p>
       </div>
    </section>
    <section class="advantages">
@@ -74,49 +76,95 @@
          <div class="reviews__list slider__list">
             <blockquote class="reviews__item slider__item">
                <cite class="reviews__author-name">Николай Петров</cite>
-               <p class="reviews__text">Это приложение перевернуло мой мир, я нашел собаку, жену и ребенка!</p>
+               <p class="reviews__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+                  А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
             </blockquote>
          </div>
          <p class="reviews__toggles slider__toggles">
-            <button class="slider__toggle" type="button">○</button>
-            <button class="slider__toggle" type="button">○</button>
-            <button class="slider__toggle" type="button">○</button>
+            <span class="slider__toggle slider__toggle--active" type="button"></span>
+            <span class="slider__toggle" type="button"></span>
+            <span class="slider__toggle" type="button"></span>
          </p>
       </div>
    </section>
    <section class="offer">
       <h2 class="visually-hidden">Наши тарифы</h2>
       <div class="offer__wrapper slider">
-         <div class="offer__list slider__list">
-            <div class="offer__item slider__item">
-               <header class="offer__header">
-                  <div class="offer__title">
-                     [before::stripe]
-                     Стандарт
-                  </div>
-                  <div class="offer__price">
-                     3,99 USD
-                  </div>
-               </header>
-               <div class="offer__features">
-                  <ul class="offer__list">
-                     <li class="offer__item">
-                        <p class="offer__feature">Розовый фильтр</p>
-                     </li>
-                     <li class="offer__item">
-                        <p class="offer__feature">Смайлики</p>
-                     </li>
-                     <li class="offer__item">
-                        <p class="offer__feature">Комментарии</p>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-         </div>
+         <table class="offer__table">
+            <tbody><tr class="offer__table-header">
+              <td class="offer__features-header">
+                <span class="sr-only">Опции</span>
+              </td>
+              <th class="offer__header">
+                <div class="offer__name">База</div>
+                <div class="offer__price">1,99 USD</div>
+              </th>
+              <th class="offer__header  offer__header--flag">
+                <div class="offer__name">Стандарт</div>
+                <div class="offer__flag">Хит</div>
+                <div class="offer__price">3,99 USD</div>
+              </th>
+              <th class="offer__header">
+                <div class="offer__name">Анлим</div>
+                <div class="offer__price">9,99 USD</div>
+              </th>
+            </tr>
+            <tr>
+              <td class="offer__item  offer__item--feature-title">
+                <span class="offer__feature">Розовый фильтр</span>
+              </td>
+              <td class="offer__item">
+                <span class="offer__feature  offer__feature--name">Розовый фильтр</span>
+                <span class="offer__feature-status  offer__feature-status--on">Включено</span>
+              </td>
+              <td class="offer__item">
+                <span class="offer__feature  offer__feature--name">Розовый фильтр</span>
+                <span class="offer__feature-status  offer__feature-status--on">Включено</span>
+              </td>
+              <td class="offer__item">
+                <span class="offer__feature  offer__feature--name">Розовый фильтр</span>
+                <span class="offer__feature-status  offer__feature-status--on">Включено</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="offer__item  offer__item--feature-title">
+                <span class="offer__feature">Смайлики</span>
+              </td>
+              <td class="offer__item">
+                <span class="offer__feature  offer__feature--name">Смайлики</span>
+                <span class="offer__feature-status  offer__feature-status--off">Не включено</span>
+              </td>
+              <td class="offer__item">
+                <span class="offer_feature  offer__feature--name">Смайлики</span>
+                <span class="offer__feature-status  offer__feature-status--on">Включено</span>
+              </td>
+              <td class="offer__item">
+                <span class="offer__feature  offer__feature--name">Смайлики</span>
+                <span class="offer__feature-status  offer__feature-status--on">Включено</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="offer__item  offer__item--feature-title">
+                <span class="offer__feature">Комментарии</span>
+              </td>
+              <td class="offer__item">
+                <span class="offer__feature  offer__feature--name">Комментарии</span>
+                <span class="offer__feature-status  offer__feature-status--off">Не включено</span>
+              </td>
+              <td class="offer__item">                
+               <span class="offer__feature  offer__feature--name">Комментарии</span>
+                <span class="offer__feature-status  offer__feature-status--off">Не включено</span>
+              </td>
+              <td class="offer__item">
+                <span class="offer__feature  offer__feature--name">Комментарии</span>
+                <span class="offer__feature-status  offer__feature-status--on">Включено</span>
+              </td>
+            </tr>
+          </tbody></table>
          <p class="offer__toggles slider__toggles">
-            <button class="slider__toggle" type="button">○</button>
-            <button class="slider__toggle" type="button">○</button>
-            <button class="slider__toggle" type="button">○</button>
+            <span class="slider__toggle slider__toggle--active" type="button"></span>
+            <span class="slider__toggle" type="button"></span>
+            <span class="slider__toggle" type="button"></span>
          </p>
       </div>
    </section>
@@ -130,39 +178,46 @@
 <footer class="page-footer">
    <div class="page-footer__wrapper">
       <div class="page-footer__contacts contacts">
-         <b class="contacts__title">Остались вопросы? <br/> Свяжитесь с нами!</b>
-         <p class="contacts__text">
+         <div class="contacts__title">
+            Остались вопросы?         
+            <p class="contacts__subtitle">Свяжитесь с нами!</p>
+      </div>
+         <div class="contacts__text">
             Звоните:<br>
             <a class="contacts__phone" href="tel:+78125556666">
-            <span class="contacts__phone-mobile"></span> +7 (812) 555-66-66
+            <span class="contacts__phone-mobile">+7 (812) 555-66-66</span>
             </a>
-         </p>
-         <p class="contacts__text">
+         </div>
+         <div class="contacts__text">
             Пишите:<br>
             <a class="contacts__link" href="mailto:mail@htmlacademy.ru">
             <span class="contacts__email">mail@htmlacademy.ru</span> 
             </a>
-         </p>
-         <p class="contacts__text">
+         </div>
+         <div class="contacts__text">
             Приезжайте в гости:<br>
             <a class="contacts__address" href="#">
-         <address class="contacts__address-text"> ул. Большая Конюшенная, 19/8</address>
+            <address class="contacts__address-text"> ул. Большая Конюшенная, 19/8</address>
          </a>
-         </p>
+      </div>
       </div>
       <div class="page-footer__map">
-            карта
-         <div id="map">карта</div>
+         <div class="page-footer__map-wrapper">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aaa1a2a52ec2f71af9fe6e65850cc932c491d55e5bfcd891d56943e1afc88c0f7&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+         </div>
       </div>
       <div class="page-footer__social social">
          <ul class="social__list">
             <li class="social__item">
+               <span class="visually-hidden">vkontakte</span> 
                <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"></a>
             </li>
             <li class="social__item">
+               <span class="visually-hidden">facebook</span>
                <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"></a>
             </li>
             <li class="social__item">
+               <span class="visually-hidden">instagram</span>
                <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy"></a>
             </li>
          </ul>
@@ -173,6 +228,14 @@
       </div>
    </div>
 </footer>
+
+
+<!-- <a class="social__link" href="https://www.facebook.com/">
+   <span class="visually-hidden">facebook</span> 
+   <svg class="social__icon social__icon--fb" width="15" height="28">
+      <use xlink:href="#icon-fb"></use>
+   </svg>
+</a> -->
    
 <!-- 
    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
@@ -180,8 +243,7 @@
     type="text/javascript"></script> -->
 
    <!-- футер выглядит иначе -->
-   <!-- туда входит не только карта, но и все, что находится внизу сайта, включая мобильную версию -->
-
+   <!-- туда не входит карта, но входит все, что связано с социалками  -->
 <%= _.template(require('./../includes/footer.html'))(data) %>
 
 <!-- 

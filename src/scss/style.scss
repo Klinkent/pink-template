@@ -1,4 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+/* Переменные */
+
+:root {
+  --black: 0, 0, 0;
+  --white: 255 255 255;
+  --nav-back: 40 54 6;
+}
 
 /* Указываем box sizing */
 *,
@@ -94,6 +101,10 @@ h3 {
 h4 {
 }
 
+.page-main {
+  margin-bottom: 29px;
+}
+
 // ============================================
 // Хедер
 // ============================================
@@ -106,20 +117,34 @@ h4 {
   text-align: center;
 
   background-color: #293746;
-  text-transform: uppercase;
 }
 
 .page-header__wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
+  width: 100%;
+  // background-color: rgba(var(--black), 0.3);
+  background-color: #283745;
+}
+
+.page-header__logo-image {
+  margin: 22px 20px;
+  width: 75px;
+  height: 22px;
 }
 
 .main-nav__toggle {
-  color: red;
-  background-color: darkgreen;
-  border: none;
-  outline: none;
+  position: absolute;
+  top: 21px;
+  right: 19px;
+  width: 50px;
+  height: 24px;
+  padding: 0;
+
+  background-color: white;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+
+  background: url("../img/icon-menu-burger.svg");
 }
 
 .main-nav__toggle-icon {
@@ -130,6 +155,10 @@ h4 {
 // Навигация
 // ============================================
 
+.main-nav {
+  width: 100%;
+}
+
 .main-nav__list {
   width: 100%;
   min-width: 320px;
@@ -137,16 +166,22 @@ h4 {
 }
 
 .main-list__item a {
+  display: block;
+  margin: 0;
+  background-color: #283745;
   color: white;
   text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
   font-weight: 700;
+  line-height: 32px;
+  padding: 16px 20px;
+  box-shadow: 0 -1px 0 #000, inset 0 1px 0 rgba(white, 0.15);
 }
 
 .main-list__item {
-  display: flex;
   justify-content: center;
   align-items: center;
-  height: 66px;
   box-shadow: 0 0 1px rgb(255, 255, 255);
 }
 
@@ -154,9 +189,485 @@ h4 {
 // Хедер
 // ============================================
 
-// Блок комментариев для подраздела
-// ==========================================================================
+.hero {
+  background-repeat: no-repeat;
+  background-position: center top;
+  color: black;
+  padding-top: 66px;
 
+  background: url("../img/bg-back-mobile@1x.jpg");
+  background-size: 700px auto;
+
+  margin-bottom: 29px;
+}
+
+.hero__wrapper::before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 320px;
+  height: 396px;
+  bottom: 0;
+  background-image: url(../img/iphone-hand-mobile@1x.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero__title {
+  color: white;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+  margin: 0;
+  text-align: center;
+}
+
+// ============================================
+// Блок "Скачать приложение"
+// ============================================
+
+.download {
+  background-color: #1d2731;
+  padding-top: 28px;
+  padding-bottom: 29px;
+  text-align: center;
+}
+
+.download__wrapper {
+  width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+.button {
+  display: inline-block;
+  vertical-align: top;
+  padding: 15px 30px 16px;
+  border: 0;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  outline: 0;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.download__button {
+  border: 3px solid white;
+  border-radius: 30px;
+  color: white;
+  background-color: rgba(var(black), 0);
+}
+
+.download__socials-list {
+  display: inline-flex;
+}
+
+.download__icon {
+  display: inline-block;
+  vertical-align: top;
+  width: 47px;
+  height: 56px;
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+.download__icon--apple {
+  background: url(../img/logo-apple.svg) no-repeat top left;
+  background-size: 47px 56px;
+}
+
+.download__icon--microsoft {
+  background: url(../img/logo-microsoft.svg) no-repeat right 12px;
+  background-size: 44px 41px;
+}
+
+.download__icon--google {
+  background: url(../img/logo-android.svg) no-repeat center 8px;
+  background-size: 43px 47px;
+}
+
+.download__description {
+  color: white;
+  font-weight: 300;
+  margin-top: 22px;
+}
+
+// ============================================
+// Заголовки после кнопок скачивания
+// ============================================
+
+.lead {
+  width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto 31px;
+}
+
+.lead__wrapper {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+  margin: 0;
+  text-align: center;
+}
+
+.lead__subtitle {
+  display: block;
+  margin-top: 27px;
+}
+
+// ============================================
+// Наши преимущества
+// ============================================
+
+.advantages {
+  position: relative;
+  padding-top: 80px;
+  margin-bottom: 29px;
+}
+
+.advantages::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2 url(../img/bg-triangle-white.svg) no-repeat center top;
+  background-size: 100% 31px;
+  z-index: 0;
+}
+
+.advantages__wrapper {
+  width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.advantages__list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.advantages__item {
+  margin-bottom: 29px;
+}
+
+.advantages__title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: black;
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+.advantages__description {
+  margin: 0;
+}
+
+.advantages__wrapper::after {
+  content: "";
+  position: relative;
+  display: block;
+  bottom: 0;
+  width: 158px;
+  height: 277px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  background-image: url(../img/iphone-screen-mobile@1x.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+// ============================================
+// Отзывы
+// ============================================
+
+.reviews {
+  margin-bottom: 29px;
+}
+
+.reviews__list {
+  margin-bottom: 28px;
+}
+
+.reviews__wrapper {
+  width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+.reviews__item {
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.reviews__author-name {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: black;
+  margin: 0;
+}
+
+.reviews__text {
+  margin-top: 14px;
+  margin-bottom: 0;
+
+  &::before {
+    content: open-quote;
+  }
+
+  &::after {
+    content: close-quote;
+  }
+}
+
+.reviews__toggles {
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0;
+  text-align: center;
+  background-color: inherit;
+}
+
+// Слайдер обзора
+// ============================================
+
+.slider__toggle {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin-left: 1px;
+  margin-right: 1px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+
+    background-color: grey;
+    width: 6px;
+    height: 6px;
+  }
+
+  &--active::before {
+    width: 12px;
+    height: 12px;
+    border: 3px solid #283645;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(black, 0%);
+  }
+}
+
+// ============================================
+// Тарифы
+// ============================================
+
+.offer__wrapper {
+  position: relative;
+  background-color: #f2f2f2;
+  padding-top: 91px;
+  padding-bottom: 42px;
+  max-width: 100%;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #f2f2f2 url(../img/bg-triangle-white.svg) no-repeat center top;
+    background-size: 100% 25px;
+    z-index: 0;
+  }
+}
+
+.offer__table {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-collapse: collapse;
+  width: 262.5%;
+  margin-bottom: 28px;
+}
+
+.offer__header {
+  position: relative;
+  background-color: #283645;
+  color: white;
+  text-transform: uppercase;
+  padding: 17px 20px 20px;
+  background-clip: padding-box;
+
+  &--flag::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -2px;
+    width: 74px;
+    height: 73px;
+    background: url(../img/bg-hit.svg) no-repeat top left;
+    background-size: 74px 73px;
+  }
+
+  &:first-of-type {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+
+  &:last-of-type {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: none;
+    border-right: none;
+  }
+}
+
+.offer__flag {
+  position: absolute;
+  top: 6px;
+  left: 1px;
+  width: 78px;
+  height: 73px;
+  transform: rotate(-45deg);
+  font-weight: 400;
+}
+
+.offer__price {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.offer__name {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  margin: 0 0 1px;
+}
+
+.offer__item {
+  position: relative;
+  padding: 17px 68px 18px 22px;
+  background-color: white;
+  border: 2px solid #e5e5e5;
+  border-top-width: 0;
+  background-clip: padding-box;
+}
+
+.offer__feature-status {
+  position: absolute;
+  display: block;
+  width: 31px;
+  height: 30px;
+  top: 13px;
+  right: 17px;
+  text-indent: -1000px;
+  overflow: hidden;
+
+  &--on {
+    background: url(../img/icon-yes.svg) no-repeat center;
+    background-size: 31px 21px;
+  }
+
+  &--off {
+    background: url(../img/icon-no.svg) no-repeat center;
+    background-size: 27px 26px;
+  }
+}
+
+.offer__toggles {
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0;
+  text-align: center;
+  background-color: inherit;
+}
+
+// ============================================
+// Футер
+// ============================================
+
+.page-footer {
+  text-align: center;
+}
+
+.contacts__title {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+  margin: 0 0 29px;
+}
+
+.contacts__text {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  margin: 0 0 23px;
+}
+
+.contacts__phone,
+.contacts__link,
+.contacts__address {
+  text-decoration: none;
+}
+
+.contacts__phone-mobile,
+.contacts__email,
+.contacts__address-text {
+  color: #d22856;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.page-footer__map {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.page-footer__map-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 225px;
+  background-image: url(../img/bg-map-mobile@1x.jpg);
+  background-repeat: no-repeat;
+  background-position: center -220px;
+}
 //
 // Блок комментариев для группы правил.
 //
