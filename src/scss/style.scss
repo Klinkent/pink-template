@@ -615,12 +615,8 @@ h4 {
 }
 
 // ============================================
-// Футер
+// Контакты
 // ============================================
-
-.page-footer {
-  text-align: center;
-}
 
 .contacts__title {
   font-size: 24px;
@@ -653,6 +649,14 @@ h4 {
   text-decoration: none;
 }
 
+// ============================================
+// Футер
+// ============================================
+
+.page-footer {
+  text-align: center;
+}
+
 .page-footer__map {
   position: relative;
   height: 200px;
@@ -667,6 +671,17 @@ h4 {
   background-image: url(../img/bg-map-mobile@1x.jpg);
   background-repeat: no-repeat;
   background-position: center -220px;
+}
+
+.page-footer__social {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 51px;
+  height: 51px;
+  border: 3px solid rgba(#283645, 10%);
+  border-radius: 50%;
+  margin: 5px 6px;
 }
 //
 // Блок комментариев для группы правил.
