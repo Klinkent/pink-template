@@ -30,8 +30,7 @@ module.exports = {
   },
   devtool: "source-map",
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.js$/,
         include: path.resolve(__dirname, "src/js"),
         use: {
@@ -44,8 +43,7 @@ module.exports = {
       {
         test: /\.(sass|scss)$/,
         include: path.resolve(__dirname, "src/scss"),
-        use: [
-          {
+        use: [{
             loader: MiniCssExtractPlugin.loader,
             options: {
               sourceMap: true,
@@ -64,7 +62,7 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
-        loader: "url-loader?limit=100000",
+        loader: "url-loader?limit=10000000",
       },
     ],
   },
@@ -73,8 +71,7 @@ module.exports = {
       filename: "./css/style.bundle.css",
     }),
     new CopyWebpackPlugin({
-      patterns: [
-        {
+      patterns: [{
           from: "./src/fonts",
           to: "./fonts",
         },
