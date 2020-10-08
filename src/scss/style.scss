@@ -65,7 +65,7 @@ img {
 }
 
 /* Указываем понятную периодичность в потоке данных у article*/
-article > * + * {
+article>*+* {
   margin-top: 1em;
 }
 
@@ -89,17 +89,13 @@ select {
 // Заголовки
 // ============================================
 
-h1 {
-}
+h1 {}
 
-h2 {
-}
+h2 {}
 
-h3 {
-}
+h3 {}
 
-h4 {
-}
+h4 {}
 
 .page-main {
   margin-bottom: 29px;
@@ -151,6 +147,7 @@ h4 {
   color: red;
   background-color: red;
 }
+
 // ============================================
 // Навигация
 // ============================================
@@ -311,6 +308,13 @@ h4 {
   margin: 0 auto 31px;
 }
 
+@media (min-width: 660px) {
+  .lead {
+    width: 660px;
+    margin-bottom: 44px;
+  }
+}
+
 .lead__wrapper {
   font-size: 24px;
   line-height: 30px;
@@ -319,9 +323,25 @@ h4 {
   text-align: center;
 }
 
+@media (min-width: 660px) {
+  .lead__wrapper {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+
 .lead__subtitle {
   display: block;
   margin-top: 27px;
+}
+
+@media (min-width: 660px) {
+  .lead__subtitle {
+    margin-top: 0;
+    max-width: 355px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 // ============================================
@@ -332,6 +352,7 @@ h4 {
   position: relative;
   padding-top: 80px;
   margin-bottom: 29px;
+  font-size: 14px;
 }
 
 .advantages::before {
@@ -345,6 +366,19 @@ h4 {
   z-index: 0;
 }
 
+@media (min-width: 660px) {
+  .advantages::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #f2f2f2 url(../img/bg-triangle-white.svg) no-repeat center top;
+    background-size: 100% 51px;
+    z-index: 0;
+  }
+}
+
 .advantages__wrapper {
   width: 320px;
   padding-left: 20px;
@@ -353,15 +387,36 @@ h4 {
   text-align: center;
 }
 
-.advantages__list {
+@media (min-width: 660px) {
+  .advantages__wrapper {
+    width: 660px;
+    padding-top: 75px;
+  }
+}
+
+.advantages__wrapper-list {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
 }
 
+@media (min-width: 660px) {
+  .advantages__wrapper-list {
+    padding-left: 50%;
+    text-align: left;
+    padding-bottom: 42px;
+  }
+}
+
 .advantages__item {
   margin-bottom: 29px;
+}
+
+@media (min-width: 660px) {
+  .advantages__item {
+    margin-bottom: 33px;
+  }
 }
 
 .advantages__title {
@@ -373,11 +428,17 @@ h4 {
   margin-bottom: 14px;
 }
 
+@media (min-width: 660px) {
+  .advantages__title {
+    margin-bottom: 13px;
+  }
+}
+
 .advantages__description {
   margin: 0;
 }
 
-.advantages__wrapper::after {
+.advantages__list::after {
   content: "";
   position: relative;
   display: block;
@@ -392,12 +453,140 @@ h4 {
   background-position: center top;
 }
 
+@media (min-width: 660px) {
+  .advantages__list::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 268px;
+    height: 481px;
+    background-image: url(../img/iphone-screen-2-tablet@1x.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 660px),
+(min-resolution: 144dpi) and (min-width: 660px),
+(min-resolution: 1.5dppx) and (min-width: 660px) {
+  .advantages__list::after {
+    background-image: url(../img/iphone-screen-2-tablet@2x.png);
+    background-size: 268px auto;
+  }
+}
+
+.advantages__research {
+  display: none;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+@media (min-width: 660px) {
+  .advantages__research {
+    display: block;
+    padding-top: 58px;
+    position: relative;
+    background-color: white;
+  }
+}
+
+.advantages__research-inner {
+  width: 320px;
+  padding-left: 20px;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 660px) {
+  .advantages__research-inner {
+    width: 660px;
+  }
+}
+
+.advantages__timer,
+.advantages__timer-icon {
+  width: 238px;
+  height: 276px;
+}
+
+.advantages__timer {
+  position: relative;
+  margin-left: 1px;
+  margin-right: 71px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.advantages__timer::before {
+  content: "24";
+  position: absolute;
+  display: inline-block;
+  vertical-align: top;
+  top: 78px;
+  left: 50%;
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 149.47px;
+  transform: translateX(-50%);
+  color: #d22856;
+}
+
+.advantages__research-lead {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 23px;
+}
+
+.advantages__research-title {
+  margin-top: 0;
+  margin-bottom: 9px;
+  font-size: 30px;
+  line-height: 36px;
+  color: black;
+}
+
+@media (min-width: 660px) {
+  .advantages__research-title {
+    max-width: 175px;
+  }
+}
+
+.advantages__research-text {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.advantages__research-link {
+
+  &:link,
+  &:visited {
+    color: #d22856;
+  }
+
+  &:hover {
+    color: #d22856;
+  }
+}
+
+.advantages__research-link-text {
+  margin: 0;
+}
+
 // ============================================
 // Отзывы
 // ============================================
 
 .reviews {
   margin-bottom: 29px;
+}
+
+@media (min-width: 660px) {
+  .reviews {
+    padding-top: 100px;
+    padding-bottom: 16px;
+  }
 }
 
 .reviews__list {
@@ -411,6 +600,12 @@ h4 {
   margin: 0 auto;
 }
 
+@media (min-width: 660px) {
+  .reviews__wrapper {
+    width: 660px;
+  }
+}
+
 .reviews__item {
   display: flex;
   -ms-flex-direction: column;
@@ -420,12 +615,29 @@ h4 {
   line-height: 30px;
 }
 
+@media (min-width: 660px) {
+  .reviews__author-block {
+    -ms-flex-order: 2;
+    order: 2;
+  }
+}
+
 .reviews__author-name {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
   color: black;
   margin: 0;
+}
+
+.reviews__author-about {
+  display: none;
+}
+
+@media (min-width: 660px) {
+  .reviews__author-about {
+    display: block;
+  }
 }
 
 .reviews__text {
@@ -438,6 +650,14 @@ h4 {
 
   &::after {
     content: close-quote;
+  }
+}
+
+@media (min-width: 660px) {
+  .reviews__text {
+    margin-top: 0;
+    margin-bottom: 36px;
+    font-size: 18px;
   }
 }
 
@@ -615,12 +835,8 @@ h4 {
 }
 
 // ============================================
-// Футер
+// Контакты
 // ============================================
-
-.page-footer {
-  text-align: center;
-}
 
 .contacts__title {
   font-size: 24px;
@@ -653,6 +869,14 @@ h4 {
   text-decoration: none;
 }
 
+// ============================================
+// Футер
+// ============================================
+
+.page-footer {
+  text-align: center;
+}
+
 .page-footer__map {
   position: relative;
   height: 200px;
@@ -668,6 +892,18 @@ h4 {
   background-repeat: no-repeat;
   background-position: center -220px;
 }
+
+.page-footer__social {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 51px;
+  height: 51px;
+  border: 3px solid rgba(#283645, 10%);
+  border-radius: 50%;
+  margin: 5px 6px;
+}
+
 //
 // Блок комментариев для группы правил.
 //
