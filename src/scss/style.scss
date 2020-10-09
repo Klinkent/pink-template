@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 /* Переменные */
 
 :root {
@@ -44,7 +44,7 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
@@ -161,7 +161,7 @@ h4 {}
   outline: 0;
   cursor: pointer;
 
-  background: url("../img/icon-menu-burger.svg");
+  background: url('../img/icon-menu-burger.svg');
 }
 
 @media (min-width: 660px) {
@@ -250,7 +250,6 @@ h4 {}
   }
 }
 
-
 .hero__wrapper {
   width: 320px;
   padding-left: 20px;
@@ -268,7 +267,7 @@ h4 {}
 }
 
 .hero__wrapper::before {
-  content: "";
+  content: '';
   display: block;
   position: relative;
   width: 320px;
@@ -368,7 +367,7 @@ h4 {}
   vertical-align: top;
   padding: 15px 30px 16px;
   border: 0;
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
@@ -494,7 +493,7 @@ h4 {}
 }
 
 .advantages::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   width: 100%;
@@ -506,7 +505,7 @@ h4 {}
 
 @media (min-width: 660px) {
   .advantages::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     width: 100%;
@@ -577,7 +576,7 @@ h4 {}
 }
 
 .advantages__list::after {
-  content: "";
+  content: '';
   position: relative;
   display: block;
   bottom: 0;
@@ -593,7 +592,7 @@ h4 {}
 
 @media (min-width: 660px) {
   .advantages__list::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0;
     left: 0;
@@ -658,7 +657,7 @@ h4 {}
 }
 
 .advantages__timer::before {
-  content: "24";
+  content: '24';
   position: absolute;
   display: inline-block;
   vertical-align: top;
@@ -822,7 +821,7 @@ h4 {}
   margin-right: 1px;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     display: block;
     top: 50%;
@@ -858,7 +857,7 @@ h4 {}
   overflow: hidden;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     width: 100%;
@@ -887,7 +886,7 @@ h4 {}
   background-clip: padding-box;
 
   &--flag::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: -2px;
