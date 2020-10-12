@@ -726,8 +726,38 @@ h4 {}
   }
 }
 
+@media (min-width: 960px) {
+  .reviews {
+    position: relative;
+    padding-top: 185px;
+    padding-bottom: 49px;
+  }
+}
+
+@media (min-width: 960px) {
+  .reviews::before {
+    content: "";
+    position: absolute;
+    top: 71px;
+    left: 50%;
+    width: 78.672px;
+    height: 63.789px;
+    transform: translateX(-50%);
+    margin-left: 2px;
+    background: url(../img/icon-quotes.svg) no-repeat top left;
+    background-size: 78.672px 63.789px;
+  }
+}
+
 .reviews__list {
   margin-bottom: 28px;
+}
+
+@media (min-width: 960px) {
+  .reviews__list {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
 }
 
 .reviews__wrapper {
@@ -743,6 +773,14 @@ h4 {}
   }
 }
 
+@media (min-width: 960px) {
+  .reviews__wrapper {
+    width: 960px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
 .reviews__item {
   display: flex;
   -ms-flex-direction: column;
@@ -750,6 +788,10 @@ h4 {}
   text-align: center;
   font-size: 14px;
   line-height: 30px;
+}
+
+.reviews__item:not(:first-child) {
+  display: none;
 }
 
 @media (min-width: 660px) {
@@ -765,15 +807,31 @@ h4 {}
   font-weight: 700;
   color: black;
   margin: 0;
+  font-style: normal;
+}
+
+@media (min-width: 960px) {
+  .reviews__author-name {
+    font-size: 24px;
+    line-height: 30px;
+  }
 }
 
 .reviews__author-about {
   display: none;
+  font-style: normal;
 }
 
 @media (min-width: 660px) {
   .reviews__author-about {
     display: block;
+  }
+}
+
+@media (min-width: 960px) {
+  .reviews__author-about {
+    font-size: 18px;
+    line-height: 30px;
   }
 }
 
@@ -806,6 +864,39 @@ h4 {}
   text-align: center;
   background-color: inherit;
 }
+
+.reviews__nav {
+  display: none;
+}
+
+@media (min-width: 960px) {
+  .reviews__nav {
+    display: block;
+    position: absolute;
+    top: 28px;
+    width: 22px;
+    border: 0;
+    padding: 0;
+    height: 41px;
+    background-size: 22px 41px;
+    text-indent: -1000px;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: .3;
+    outline: 0;
+  }
+}
+
+.reviews__nav--previous {
+  left: 0;
+  background: url(../img/icon-review-arrow-left.svg) no-repeat top left;
+}
+
+.reviews__nav--next {
+  right: 0;
+  background: url(../img/icon-review-arrow-right.svg) no-repeat top left;
+}
+
 
 // Слайдер обзора
 // ============================================
