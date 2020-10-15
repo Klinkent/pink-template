@@ -115,10 +115,36 @@ h4 {}
   background-color: #293746;
 }
 
+@media (min-width: 960px) {
+  .page-header__logo {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 960px) {
+  .page-header {
+    position: absolute;
+    background-color: rgba(black, 0.3);
+    color: white;
+    width: 100%;
+    z-index: 2;
+  }
+}
+
 .page-header__wrapper {
   width: 100%;
   // background-color: rgba(var(--black), 0.3);
-  background-color: #283745;
+  // background-color: #283745;
+}
+
+@media (min-width: 960px) {
+  .page-header__wrapper {
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .page-header__logo-image {
@@ -133,12 +159,39 @@ h4 {}
   }
 }
 
+@media (min-width: 960px) {
+  .page-header__logo {
+    margin-left: 0;
+  }
+}
+
 .page-header__logo-image-tablet {
   display: none;
 }
 
 @media (min-width: 660px) {
   .page-header__logo-image-tablet {
+    display: block;
+    margin: 22px 20px;
+    margin-top: 27px;
+    margin-bottom: 43px;
+    width: 147px;
+    height: 40px;
+  }
+}
+
+@media (min-width: 960px) {
+  .page-header__logo-image-tablet {
+    display: none;
+  }
+}
+
+.page-header__logo-image-desktop {
+  display: none;
+}
+
+@media (min-width: 960px) {
+  .page-header__logo-image-desktop {
     display: block;
     margin: 22px 20px;
     margin-top: 27px;
@@ -170,6 +223,12 @@ h4 {}
   }
 }
 
+@media (min-width: 960px) {
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
 .main-nav__toggle-icon {
   color: red;
   background-color: red;
@@ -183,10 +242,35 @@ h4 {}
   width: 100%;
 }
 
+@media (min-width: 960px) {
+  .main-nav {
+    margin-left: auto;
+    width: 760px;
+    padding-top: 34px;
+    padding-bottom: 36px;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+  }
+}
+
 .main-nav__list {
   width: 100%;
   min-width: 320px;
   font-size: 16px;
+}
+
+@media (min-width: 960px) {
+  .main-nav__list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    border-top: none;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
 }
 
 .main-list__item a {
@@ -203,10 +287,52 @@ h4 {}
   box-shadow: 0 -1px 0 #000, inset 0 1px 0 rgba(white, 0.15);
 }
 
+@media (min-width: 960px) {
+  .main-list__item a {
+    background-color: rgba(white, 0);
+    border: 0;
+    box-shadow: none;
+    text-transform: none;
+    line-height: 18px;
+    font-weight: 400;
+    padding: 11px 0;
+  }
+}
+
 .main-list__item {
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 1px rgb(255, 255, 255);
+  // box-shadow: 0 0 1px rgb(255, 255, 255);
+}
+
+@media (min-width: 960px) {
+  .main-list__item {
+    margin-left: 80px;
+  }
+}
+
+@media (min-width: 960px) {
+  .main-list__item--active {
+    position: relative;
+  }
+}
+
+@media (min-width: 960px) {
+  .main-list__item--active::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -2px;
+    left: 0;
+    height: 2px;
+    background: white;
+  }
+}
+
+@media (min-width: 960px) {
+  .main-list__item:first-child {
+    margin-left: 0;
+  }
 }
 
 // ============================================
@@ -250,6 +376,15 @@ h4 {}
   }
 }
 
+@media (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 960px),
+(min-resolution: 144dpi) and (min-width: 960px),
+(min-resolution: 1.5dppx) and (min-width: 960px) {
+  .hero {
+    background-image: url(../img/bg-back-desktop@2x.jpg);
+    background-size: 2560px auto;
+  }
+}
+
 .hero__wrapper {
   width: 320px;
   padding-left: 20px;
@@ -263,6 +398,14 @@ h4 {}
     min-height: 619px;
     width: 660px;
     height: 100%;
+  }
+}
+
+@media (min-width: 960px) {
+  .hero__wrapper {
+    width: 960px;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 }
 
@@ -313,6 +456,26 @@ h4 {}
   }
 }
 
+@media (min-width: 960px) {
+  .hero__wrapper::before {
+    width: 100%;
+    height: 645px;
+    min-height: 743px;
+    background-image: url(../img/iphone-hand-desktop@1x.png);
+    background-position: 26px bottom;
+    margin-bottom: -1px;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 960px),
+(min-resolution: 144dpi) and (min-width: 960px),
+(min-resolution: 1.5dppx) and (min-width: 960px) {
+  .hero__wrapper::before {
+    background-image: url(../img/iphone-hand-desktop@2x.png);
+    background-size: 1050px auto;
+  }
+}
+
 .hero__title {
   color: white;
   font-size: 24px;
@@ -334,6 +497,16 @@ h4 {}
   }
 }
 
+@media (min-width: 960px) {
+  .hero__title {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 51px;
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+
 // ============================================
 // Блок "Скачать приложение"
 // ============================================
@@ -352,6 +525,12 @@ h4 {}
     position: relative;
     background-color: rgba(white, 0%);
     z-index: 2;
+  }
+}
+
+@media (min-width: 960px) {
+  .download {
+    padding: 109px 0;
   }
 }
 
@@ -392,6 +571,10 @@ h4 {}
   }
 }
 
+@media (min-width: 960px) {
+  .download__button {}
+}
+
 .download__socials-list {
   display: inline-flex;
 }
@@ -427,10 +610,16 @@ h4 {}
 }
 
 @media (min-width: 660px) {
-  .downloads__desc {
+  .download__description {
     font-size: 18px;
     line-height: 24px;
     margin-top: 38px;
+  }
+}
+
+@media (min-width: 960px) {
+  .download__description {
+    margin-top: 55px;
   }
 }
 
@@ -452,6 +641,15 @@ h4 {}
   }
 }
 
+@media (min-width: 960px) {
+  .lead {
+    width: 960px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 0;
+  }
+}
+
 .lead__wrapper {
   font-size: 24px;
   line-height: 30px;
@@ -467,6 +665,13 @@ h4 {}
   }
 }
 
+@media (min-width: 960px) {
+  .lead__wrapper {
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+
 .lead__subtitle {
   display: block;
   margin-top: 27px;
@@ -478,6 +683,12 @@ h4 {}
     max-width: 355px;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+@media (min-width: 960px) {
+  .lead__subtitle {
+    max-width: 500px;
   }
 }
 
@@ -516,6 +727,19 @@ h4 {}
   }
 }
 
+@media (min-width: 960px) {
+  .advantages::before {
+    content: "";
+    position: absolute;
+    top: 87px;
+    width: 100%;
+    height: 100%;
+    background: #f2f2f2 url(../img/bg-triangle-white.svg) no-repeat center top;
+    background-size: 100% 74px;
+    z-index: 0;
+  }
+}
+
 .advantages__wrapper {
   width: 320px;
   padding-left: 20px;
@@ -531,7 +755,22 @@ h4 {}
   }
 }
 
-.advantages__wrapper-list {
+@media (min-width: 960px) {
+  .advantages__wrapper {
+    width: 960px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 960px) {
+  .advantages__wrapper {
+    padding-top: 75px;
+  }
+}
+
+.advantages__list {
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -539,10 +778,20 @@ h4 {}
 }
 
 @media (min-width: 660px) {
-  .advantages__wrapper-list {
+  .advantages__list {
     padding-left: 50%;
     text-align: left;
     padding-bottom: 42px;
+  }
+}
+
+@media (min-width: 960px) {
+  .advantages__list {
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding: 0;
+    text-align: center;
+    top: 12px;
   }
 }
 
@@ -553,6 +802,117 @@ h4 {}
 @media (min-width: 660px) {
   .advantages__item {
     margin-bottom: 33px;
+  }
+}
+
+@media (min-width: 960px) {
+  .advantages__item {
+    position: relative;
+    width: 300px;
+    padding: 357px 30px 67px;
+    margin-right: 20px;
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 30px;
+    top: -12px;
+  }
+}
+
+@media (min-width: 660px) {
+  .advantages__item::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 268px;
+    height: 481px;
+  }
+}
+
+@media (min-width: 960px) {
+  .advantages__item::before {
+    top: 0;
+    width: 100%;
+    height: 302px;
+  }
+}
+
+@media (min-width: 960px) {
+  .advantages__item--mood::before {
+    background-image: url(../img/iphone-screen-1-desktop@1x.png);
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 960px),
+(min-resolution: 144dpi) and (min-width: 960px),
+(min-resolution: 1.5dppx) and (min-width: 960px) {
+  .advantages__item--mood::before {
+    background-image: url(../img/iphone-screen-1-desktop@2x.png);
+    background-size: 292px auto;
+  }
+}
+
+@media (min-width: 960px) {
+  .advantages__item--world::before {
+    background-image: url(../img/iphone-screen-2-desktop@1x.png);
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 660px),
+(min-resolution: 144dpi) and (min-width: 660px),
+(min-resolution: 1.5dppx) and (min-width: 660px) {
+  .advantages__item--world::before {
+    background-image: url(../img/iphone-screen-2-tablet@2x.png);
+    background-size: 268px auto;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 960px),
+(min-resolution: 144dpi) and (min-width: 960px),
+(min-resolution: 1.5dppx) and (min-width: 960px) {
+  .advantages__item--world::before {
+    background-image: url(../img/iphone-screen-2-desktop@2x.png);
+    background-size: 292px auto;
+  }
+}
+
+@media (min-width: 660px) {
+  .advantages__item--friends::before {
+    background: url(../img/iphone-screen-3-tablet@1x.png) no-repeat center top;
+  }
+}
+
+@media (min-width: 960px) {
+  .advantages__item--friends::before {
+    background-image: url(../img/iphone-screen-3-desktop@1x.png);
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 660px),
+(min-resolution: 144dpi) and (min-width: 660px),
+(min-resolution: 1.5dppx) and (min-width: 660px) {
+  .advantages__item--friends::before {
+    background-image: url(../img/iphone-screen-3-tablet@2x.png);
+    background-size: 268px auto;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 960px),
+(min-resolution: 144dpi) and (min-width: 960px),
+(min-resolution: 1.5dppx) and (min-width: 960px) {
+  .advantages__item--friends::before {
+    background-image: url(../img/iphone-screen-3-desktop@2x.png);
+    background-size: 292px auto;
+  }
+}
+
+.advantages__item:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 960px) {
+  .advantages__item:nth-child(3n) {
+    margin-right: 0;
   }
 }
 
@@ -590,6 +950,15 @@ h4 {}
   background-position: center top;
 }
 
+@media (-webkit-min-device-pixel-ratio: 1.5),
+(min-resolution: 144dpi),
+(min-resolution: 1.5dppx) {
+  .advantages__list::after {
+    background-image: url(../img/iphone-screen-mobile@2x.png);
+    background-size: 157px auto;
+  }
+}
+
 @media (min-width: 660px) {
   .advantages__list::after {
     content: '';
@@ -610,6 +979,12 @@ h4 {}
   .advantages__list::after {
     background-image: url(../img/iphone-screen-2-tablet@2x.png);
     background-size: 268px auto;
+  }
+}
+
+@media (min-width: 660px) {
+  .advantages__list::after {
+    display: none;
   }
 }
 
@@ -726,8 +1101,38 @@ h4 {}
   }
 }
 
+@media (min-width: 960px) {
+  .reviews {
+    position: relative;
+    padding-top: 185px;
+    padding-bottom: 49px;
+  }
+}
+
+@media (min-width: 960px) {
+  .reviews::before {
+    content: '';
+    position: absolute;
+    top: 71px;
+    left: 50%;
+    width: 78.672px;
+    height: 63.789px;
+    transform: translateX(-50%);
+    margin-left: 2px;
+    background: url(../img/icon-quotes.svg) no-repeat top left;
+    background-size: 78.672px 63.789px;
+  }
+}
+
 .reviews__list {
   margin-bottom: 28px;
+}
+
+@media (min-width: 960px) {
+  .reviews__list {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
 }
 
 .reviews__wrapper {
@@ -743,6 +1148,14 @@ h4 {}
   }
 }
 
+@media (min-width: 960px) {
+  .reviews__wrapper {
+    width: 960px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
 .reviews__item {
   display: flex;
   -ms-flex-direction: column;
@@ -750,6 +1163,10 @@ h4 {}
   text-align: center;
   font-size: 14px;
   line-height: 30px;
+}
+
+.reviews__item:not(:first-child) {
+  display: none;
 }
 
 @media (min-width: 660px) {
@@ -765,15 +1182,31 @@ h4 {}
   font-weight: 700;
   color: black;
   margin: 0;
+  font-style: normal;
+}
+
+@media (min-width: 960px) {
+  .reviews__author-name {
+    font-size: 24px;
+    line-height: 30px;
+  }
 }
 
 .reviews__author-about {
   display: none;
+  font-style: normal;
 }
 
 @media (min-width: 660px) {
   .reviews__author-about {
     display: block;
+  }
+}
+
+@media (min-width: 960px) {
+  .reviews__author-about {
+    font-size: 18px;
+    line-height: 30px;
   }
 }
 
@@ -805,6 +1238,38 @@ h4 {}
   font-size: 0;
   text-align: center;
   background-color: inherit;
+}
+
+.reviews__nav {
+  display: none;
+}
+
+@media (min-width: 960px) {
+  .reviews__nav {
+    display: block;
+    position: absolute;
+    top: 28px;
+    width: 22px;
+    border: 0;
+    padding: 0;
+    height: 41px;
+    background-size: 22px 41px;
+    text-indent: -1000px;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0.3;
+    outline: 0;
+  }
+}
+
+.reviews__nav--previous {
+  left: 0;
+  background: url(../img/icon-review-arrow-left.svg) no-repeat top left;
+}
+
+.reviews__nav--next {
+  right: 0;
+  background: url(../img/icon-review-arrow-right.svg) no-repeat top left;
 }
 
 // Слайдер обзора
@@ -875,6 +1340,13 @@ h4 {}
   }
 }
 
+@media (min-width: 960px) {
+  .offer__wrapper {
+    padding-top: 140px;
+    padding-bottom: 96px;
+  }
+}
+
 @media (min-width: 660px) {
   .offer__wrapper::before {
     content: '';
@@ -884,6 +1356,19 @@ h4 {}
     height: 100%;
     background: #f2f2f2 url(../img/bg-triangle-white.svg) no-repeat center top;
     background-size: 100% 50px;
+    z-index: 0;
+  }
+}
+
+@media (min-width: 960px) {
+  .offer__wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #f2f2f2 url(../img/bg-triangle-white.svg) no-repeat center top;
+    background-size: 100% 65px;
     z-index: 0;
   }
 }
@@ -898,6 +1383,14 @@ h4 {}
 @media (min-width: 660px) {
   .offer__wrapper-inner {
     width: 660px;
+  }
+}
+
+@media (min-width: 660px) and (min-width: 960px) {
+  .offer__wrapper-inner {
+    width: 960px;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 }
 
@@ -951,7 +1444,6 @@ h4 {}
     }
   }
 
-
   &:first-of-type {
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
@@ -984,6 +1476,15 @@ h4 {}
   }
 }
 
+@media (min-width: 960px) {
+  .offer__flag {
+    top: 6px;
+    left: 3px;
+    width: 78px;
+    height: 73px;
+  }
+}
+
 .offer__price {
   font-size: 24px;
   line-height: 30px;
@@ -1003,14 +1504,11 @@ h4 {}
   margin: 0 0 1px;
 }
 
-
-
 .offer__item {
   position: relative;
   padding: 17px 68px 18px 22px;
   background-color: white;
   border: 2px solid #e5e5e5;
-  border-top-width: 0;
   background-clip: padding-box;
 
   font-size: 14px;
@@ -1018,9 +1516,21 @@ h4 {}
   color: #283645;
 }
 
+@media (min-width: 960px) {
+  .offer__item {
+    font-size: 18px;
+  }
+}
+
 @media (min-width: 660px) {
   .offer__item {
     padding: 7px 16px 8px;
+  }
+}
+
+@media (min-width: 960px) {
+  .offer__item {
+    padding: 16px 22px 13px;
   }
 }
 
@@ -1146,7 +1656,3 @@ h4 {}
   border-radius: 50%;
   margin: 5px 6px;
 }
-
-//
-// Блок комментариев для группы правил.
-//
