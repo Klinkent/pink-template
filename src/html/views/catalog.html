@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <link rel="stylesheet" href="css/style.bundle.css">
+   <title>PINK</title>
+</head>
+
+<body>
+
+<%= _.template(require('./../includes/header.html'))(data) %>
+
+<main class="main-gallery">
+      <header class="intro intro--short">
+        <div class="intro__inner  intro__inner--inner  intro__inner--gallery">
+          <h1 class="intro__title">Фотографии пользователей</h1>
+        </div>
+      </header>
+      <div class="gallery">
+        <div class="gallery__lead">
+          <p>
+            Взгляните на фотографии, которые выкладывают пользователи!
+            Видите, как не хватает ваших?
+          </p>
+        </div>
+        <article class="post  post--panorama">
+          <a class="post__panorama" href="#">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg, img/panorama-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg, img/panorama-tablet@2x.jpg 2x">
+              <img src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Анна">
+            </picture>
+            <span class="post__panorama-rubric">Панорама дня</span>
+          </a>
+          <div class="post__body-wrapper">
+            <div class="post__body  post__body--panorama">
+              <header class="post__header  post__header--panorama">
+                <span class="post__author">Анна</span>
+                <span class="post__time">(5 минут назад)</span>
+              </header>
+              <div class="post__text">
+                <p>Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+              </div>
+              <div class="post__action  post__action--panorama">
+                <button class="post__like-btn  like-btn" type="button" title="Мне нравится">Мне нравится</button>
+                <a class="post__stats  post__stats--panorama" href="#">
+                  Hравится: <span class="post__stats-count">215</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="gallery__inner">
+          <div class="post-list">
+            <article class="post  post--card">
+              <a class="post__image" href="#">
+                <picture>
+                  <source media="(min-width: 960px)" srcset="img/photo-1-desktop@1x.jpg, img/photo-1-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-1-tablet@1x.jpg, img/photo-1-tablet@2x.jpg 2x">
+                  <img src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="Левон">
+                </picture>
+              </a>
+              <div class="post__body">
+                <header class="post__header">
+                  <span class="post__author">Левон</span>
+                  <span class="post__time">(5 часов назад)</span>
+                </header>
+                <div class="post__text">
+                  <p>Вчера он на луну летал, сегодня в руки к нам попал.</p>
+                </div>
+                <div class="post__action">
+                  <button class="post__like-btn  like-btn" type="button" title="Мне нравится">Мне нравится</button>
+                  <a class="post__stats" href="#">
+                    Hравится: <span class="post__stats-count">356</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="post  post--card">
+              <a class="post__image" href="#">
+                <picture>
+                  <source media="(min-width: 960px)" srcset="img/photo-2-desktop@1x.jpg, img/photo-2-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-2-tablet@1x.jpg, img/photo-2-tablet@2x.jpg 2x">
+                  <img src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Антон">
+                </picture>
+              </a>
+              <div class="post__body">
+                <header class="post__header">
+                  <span class="post__author">Антон</span>
+                  <span class="post__time">(12 часов назад)</span>
+                </header>
+                <div class="post__text">
+                  <p>Соседи будут рады!</p>
+                </div>
+                <div class="post__action">
+                  <button class="post__like-btn  like-btn" type="button" title="Мне нравится">Мне нравится</button>
+                  <a class="post__stats" href="#">
+                    Hравится: <span class="post__stats-count">666</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="post  post--card">
+              <a class="post__image" href="#">
+                <picture>
+                  <source media="(min-width: 960px)" srcset="img/photo-3-desktop@1x.jpg, img/photo-3-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-3-tablet@1x.jpg, img/photo-3-tablet@2x.jpg 2x">
+                  <img src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Борис">
+                </picture>
+              </a>
+              <div class="post__body">
+                <header class="post__header">
+                  <span class="post__author">Борис</span>
+                  <span class="post__time">(20 часов назад)</span>
+                </header>
+                <div class="post__text">
+                  <p>Здесь могла быть ваша цитата о высоком и вечном.</p>
+                </div>
+                <div class="post__action">
+                  <button class="post__like-btn  like-btn" type="button" title="Мне нравится">Мне нравится</button>
+                  <a class="post__stats" href="#">
+                    Hравится: <span class="post__stats-count">215</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="post  post--card">
+              <a class="post__image" href="#">
+                <picture>
+                  <source media="(min-width: 960px)" srcset="img/photo-4-desktop@1x.jpg, img/photo-4-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-4-tablet@1x.jpg, img/photo-4-tablet@2x.jpg 2x">
+                  <img src="img/photo-4-mobile@1x.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" alt="Сергей">
+                </picture>
+              </a>
+              <div class="post__body">
+                <header class="post__header">
+                  <span class="post__author">Сергей</span>
+                  <span class="post__time">(25 часов назад)</span>
+                </header>
+                <div class="post__text">
+                  <p>Самая кубанская в мире!</p>
+                </div>
+                <div class="post__action">
+                  <button class="post__like-btn  like-btn" type="button" title="Мне нравится">Мне нравится</button>
+                  <a class="post__stats" href="#">
+                    Hравится: <span class="post__stats-count">4</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="post  post--card">
+              <a class="post__image" href="#">
+                <picture>
+                  <source media="(min-width: 960px)" srcset="img/photo-5-desktop@1x.jpg, img/photo-5-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-5-tablet@1x.jpg, img/photo-5-tablet@2x.jpg 2x">
+                  <img src="img/photo-5-mobile@1x.jpg" srcset="img/photo-5-mobile@2x.jpg 2x" alt="Максим">
+                </picture>
+              </a>
+              <div class="post__body">
+                <header class="post__header">
+                  <span class="post__author">Максим</span>
+                  <span class="post__time">(40 часов назад)</span>
+                </header>
+                <div class="post__text">
+                  <p>Где снег-то?</p>
+                </div>
+                <div class="post__action">
+                  <button class="post__like-btn  like-btn" type="button" title="Мне нравится">Мне нравится</button>
+                  <a class="post__stats" href="#">
+                    Hравится: <span class="post__stats-count">150</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="post  post--card">
+              <a class="post__image" href="#">
+                <picture>
+                  <source media="(min-width: 960px)" srcset="img/photo-6-desktop@1x.jpg, img/photo-6-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-6-tablet@1x.jpg, img/photo-6-tablet@2x.jpg 2x">
+                  <img src="img/photo-6-mobile@1x.jpg" srcset="img/photo-6-mobile@2x.jpg 2x" alt="Надежда">
+                </picture>
+              </a>
+              <div class="post__body">
+                <header class="post__header">
+                  <span class="post__author">Надежда</span>
+                  <span class="post__time">(45 часов назад)</span>
+                </header>
+                <div class="post__text">
+                  <p>Всем GM и взаимные лайки!</p>
+                </div>
+                <div class="post__action">
+                  <button class="post__like-btn  like-btn" type="button" title="Мне нравится">Мне нравится</button>
+                  <a class="post__stats" href="#">
+                    Hравится: <span class="post__stats-count">2560</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="photo-upload">
+        <div class="photo-upload__lead">
+          <p>
+            Затмите их всех!<br>
+            Выкладывайте все, что накопилось в телефоне!
+          </p>
+        </div>
+        <div class="photo-editor">
+          <div class="photo-editor__inner">
+            <form class="photo-editor__form" method="post" action="http://echo.htmlacademy.ru">
+              <figure class="photo-editor__image">
+                <picture>
+                  <source media="(min-width: 960px)" srcset="img/photo-7-desktop@1x.jpg, img/photo-7-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-7-tablet@1x.jpg, img/photo-7-tablet@2x.jpg 2x">
+                  <img src="img/photo-7-mobile@1x.jpg" srcset="img/photo-7-mobile@2x.jpg 2x" alt="Загруженное изображение">
+                </picture>
+              </figure>
+              <div class="photo-editor__fields">
+                <div class="photo-editor__tools-wrapper">
+                  <ul class="photo-editor__tools">
+                    <li class="photo-editor__tool">
+                      <div class="photo-editor__tool-name">
+                        <svg class="photo-editor__tool-icon  photo-editor__tool-icon--crop  photo-editor__tool-icon--active" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+                          <path fill="none" d="M0,0h48v48H0V0z"></path>
+                          <path d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z"></path>
+                        </svg>
+                        Обрезка
+                      </div>
+                      <div class="photo-editor__control  photo-editor__control--crop">
+                        <div class="photo-editor__range  photo-editor__range--crop">
+                          <div class="photo-editor__range-scale"><div class="photo-editor__range-value" style="width: 84%"></div></div>
+                          <div class="photo-editor__range-btn" tabindex="0"></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="photo-editor__tool">
+                      <div class="photo-editor__tool-name">
+                        <svg class="photo-editor__tool-icon  photo-editor__tool-icon--fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+                          <path fill="none" d="M0,0h48v48H0V0z"></path>
+                          <path d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z"></path>
+                          <rect y="40" width="48" height="3"></rect>
+                        </svg>
+                        Цветокоррекция
+                      </div>
+                      <div class="photo-editor__control  photo-editor__control--fill">
+                        <div class="photo-editor__range  photo-editor__range--fill">
+                          <div class="photo-editor__range-scale"><div class="photo-editor__range-value" style="width: 84%"></div></div>
+                          <div class="photo-editor__range-btn" tabindex="0"></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="photo-editor__tool  photo-editor__tool--contrast">
+                      <div class="photo-editor__tool-name">
+                        <svg class="photo-editor__tool-icon  photo-editor__tool-icon--contrast" xmlns="http://www.w3.org/2000/svg" viewBox="-35.422 -7.96 31.92 31.92" width="32" height="32">
+                          <path d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z"></path>
+                          <path d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"></path>
+                        </svg>
+                        Контраст
+                      </div>
+                      <div class="photo-editor__control  photo-editor__control--contrast">
+                        <div class="photo-editor__range  photo-editor__range--contrast">
+                          <div class="photo-editor__range-scale"><div class="photo-editor__range-value" style="width: 84%"></div></div>
+                          <div class="photo-editor__range-btn" tabindex="0"></div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <footer class="photo-editor__btns">
+                  <div class="photo-editor__btns-inner">
+                    <button class="photo-editor__upload-btn  btn  btn--upload" type="submit">Запостить</button>
+                    <button class="photo-editor__cancel-btn  btn  btn--cancel" type="reset">Отмена</button>
+                  </div>
+                </footer>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
