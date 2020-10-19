@@ -36,9 +36,14 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', "Arial", sans-serif;
+  padding: 0;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgb(40, 54, 69);
+  background-color: rgb(255, 255, 255);
 }
+
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
 ul[class],
@@ -68,6 +73,10 @@ button,
 textarea,
 select {
   font: inherit;
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
 }
 
 .visually-hidden {
@@ -374,6 +383,10 @@ select {
   margin-top: 0;
 }
 
+// ============================================
+// Карточки с картинками, посты пользователей
+// ============================================
+
 .post--card,
 .post--panorama {
   margin-bottom: 20px;
@@ -386,6 +399,21 @@ select {
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
+}
+
+@media (max-width: 659px) {
+  .post__panorama {
+    width: 320px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+  }
+}
+
+img {
+  border-style: none;
+  max-width: 100%;
+  height: auto;
 }
 
 .post__panorama-rubric {
@@ -452,4 +480,88 @@ select {
   -ms-flex-align: center;
   align-items: center;
   margin-top: 10px;
+}
+
+// ============================================
+// Кнопка "Нравится"
+// ============================================
+
+.like-btn {
+  width: 13px;
+  height: 12px;
+  background-color: rgb(0, 0, 0);
+  border: 0;
+  padding: 0;
+  text-indent: -1000px;
+  overflow: hidden;
+  background: url(../img/icon-heart.svg) no-repeat center;
+  background-size: 13px 12px;
+  outline: 0;
+  cursor: pointer;
+}
+
+// ============================================
+// Тело поста, тело карточки
+// ============================================
+
+.post__body-wrapper {
+  width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+.post__body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 18px 18px 20px;
+  background-color: rgb(242, 242, 242);
+}
+
+.post__stats {
+  margin-left: 19px;
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: rgb(210, 40, 86);
+  text-decoration: none;
+}
+
+// ============================================
+// Галерея
+// ============================================
+
+.gallery__inner {
+  width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+.post-list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.post--card {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 280px;
+  min-height: 301px;
+}
+
+.post__time {
+  display: inline;
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: uppercase;
+  font-weight: 300;
 }
