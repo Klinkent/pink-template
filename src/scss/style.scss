@@ -7,11 +7,11 @@
   box-sizing: border-box;
 }
 
-/* Убираем внутренние отступы */
-ul[class],
-ol[class] {
-  padding: 0;
-}
+// /* Убираем внутренние отступы */
+// ul[class],
+// ol[class] {
+//   padding: 0;
+// }
 
 /* Убираем внешние отступы */
 body,
@@ -724,4 +724,25 @@ svg:not(:root) {
 .photo-editor__range-scale {
   height: 2px;
   background-color: rgb(40, 54, 69);
+}
+
+.photo-editor__range-value {
+  height: 2px;
+  width: 50%;
+}
+
+.photo-editor__range-btn {
+  position: absolute;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid rgb(210, 40, 86);
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  outline: 0;
 }
