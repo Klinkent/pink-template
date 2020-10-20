@@ -504,13 +504,6 @@ img {
 // Тело поста, тело карточки
 // ============================================
 
-.post__body-wrapper {
-  width: 320px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 0 auto;
-}
-
 .post__body {
   display: -ms-flexbox;
   display: flex;
@@ -971,14 +964,6 @@ svg:not(:root) {
     height: 509px;
   }
 
-  .post__image img,
-  .post__panorama img {
-    position: relative;
-    width: auto;
-    max-width: inherit;
-    left: 50%;
-    transform: translateX(-50%);
-  }
 
   .post__panorama-rubric {
     transform: translateX(170px);
@@ -1028,16 +1013,6 @@ svg:not(:root) {
 
   .post-list {
     padding-top: 20px;
-  }
-
-  .post--card {
-    width: 300px;
-    min-height: 455px;
-    margin-right: 20px;
-  }
-
-  .post__image {
-    overflow: hidden;
   }
 
   .post__image img,
@@ -1253,8 +1228,6 @@ svg:not(:root) {
 
   .post--panorama {
     margin-bottom: 50px;
-    height: 506px;
-
   }
 
   .post__panorama-rubric {
@@ -1301,6 +1274,10 @@ svg:not(:root) {
     margin-right: 20px;
   }
 
+  .post--card:nth-child(3n) {
+    margin-right: 0;
+  }
+
   .photo-upload {
     padding-top: 5px;
     padding-bottom: 28px;
@@ -1326,7 +1303,7 @@ svg:not(:root) {
   .photo-editor__form {
     padding-left: 80px;
     padding-right: 60px;
-    background-color: rgb(242 242 242);
+    background-color: rgb(242, 242, 242);
   }
 
   .photo-editor__image {
@@ -1442,11 +1419,53 @@ svg:not(:root) {
   }
 }
 
+
+
+@media (min-width: 660px) {
+  .intro {
+    padding-top: 110px;
+    background-image: url(../img/bg-back-tablet@1x.jpg);
+  }
+}
+
+@media (min-width: 960px) {
+  .intro {
+    background-image: url(../img/bg-back-desktop@1x.jpg);
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5),
+(min-resolution: 144dpi),
+(min-resolution: 1.5dppx) {
+  .intro {
+    background-image: url(../img/bg-back-mobile@2x.jpg);
+    background-size: 700px auto;
+  }
+}
+
 @media (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 660px),
 (min-resolution: 144dpi) and (min-width: 660px),
 (min-resolution: 1.5dppx) and (min-width: 660px) {
   .intro {
     background-image: url(../img/bg-back-tablet@2x.jpg);
     background-size: 1200px auto;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 660px),
+(min-resolution: 144dpi) and (min-width: 660px),
+(min-resolution: 1.5dppx) and (min-width: 660px) {
+  .intro {
+    background-image: url(../img/bg-back-tablet@2x.jpg);
+    background-size: 1200px auto;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 960px),
+(min-resolution: 144dpi) and (min-width: 960px),
+(min-resolution: 1.5dppx) and (min-width: 960px) {
+  .intro {
+    background-image: url(../img/bg-back-desktop@2x.jpg);
+    background-size: 2560px auto;
   }
 }
