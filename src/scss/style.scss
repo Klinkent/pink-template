@@ -696,13 +696,6 @@ select {
   }
 }
 
-
-.contest__lead>:last-child,
-.form__field-text:last-child,
-.form__fieldset:last-child {
-  margin-bottom: 0;
-}
-
 .form__textarea--emotions {
   height: 201px;
 }
@@ -928,8 +921,6 @@ select {
     background-size: 1200px auto;
   }
 }
-
-
 
 // ============================================
 // Начало @media 660
@@ -1183,6 +1174,101 @@ select {
     width: 150px;
     text-align: right;
   }
+}
+
+// ============================================
+// Начало @media 960
+// ============================================
+
+@media (min-width: 960px) {
+  .contest {
+    padding-top: 92px;
+  }
+
+  .contest__lead {
+    width: 960px;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-bottom: 68px;
+  }
+
+  .contest__inner {
+    width: 960px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .form {
+    padding-bottom: 0;
+  }
+
+  .form__fieldset {
+    margin-bottom: 64px;
+  }
+
+  .form__fieldset {
+    margin-bottom: 64px;
+  }
+
+  .form__fieldset--achievements,
+  .form__fieldset--contacts,
+  .form__fieldset--emotions {
+    width: 100%;
+  }
+
+  .form__fieldset--fullname {
+    margin-top: 5px;
+    width: 435px;
+  }
+
+  .form__fieldset--apps {
+    width: 435px;
+  }
+
+  .form__body {
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .form__textarea-fields {
+    padding: 18px 58px 42px;
+  }
+
+  .form__textarea--emotions {
+    height: 128px;
+  }
+
+  .form__footer {
+    padding-top: 65px;
+  }
+
+  .form__note-purpose {
+    display: inline;
+  }
+
+  .logo-pink-footer {
+    width: 170px;
+    margin-bottom: 19px;
+  }
+
+  .page-footer__wrapper {
+    width: 960px;
+    padding: 70px 10px 68px;
+  }
+
+  .social {
+    margin-left: 8px;
+  }
+
+  .copyright {
+    width: 170px;
+    margin-top: 15px;
+  }
+
 }
 
 @media (max-width: 960px) {
