@@ -812,3 +812,362 @@ select {
 .form__note-purpose {
   display: none;
 }
+
+
+
+
+
+
+
+// ============================================
+// Футер (перенести)
+// ============================================
+
+.page-footer__wrapper {
+  width: 320px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+@media (max-width: 659px) {
+
+  .form__footer,
+  .page-footer__wrapper {
+    text-align: center;
+  }
+}
+
+.logo-pink-footer {
+  display: inline-block;
+  vertical-align: top;
+  height: 40px;
+}
+
+.logo-pink-footer__svg {
+  fill: rgb(40, 54, 69);
+  color: rgb(210, 40, 86);
+  width: 147px;
+  height: 40px;
+}
+
+.social {
+  font-size: 0;
+  margin-top: 35px;
+}
+
+.social__link {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 51px;
+  height: 51px;
+  border: 3px solid rgba(40, 54, 69, 0.1);
+  border-radius: 50%;
+  margin: 5px 6px;
+}
+
+.social__icon {
+  fill: rgb(210, 40, 86);
+  position: absolute;
+}
+
+.social__icon--twitter {
+  top: 15px;
+  left: 14px;
+  width: 18px;
+  height: 15px;
+}
+
+.social__icon--facebook {
+  top: 12px;
+  left: 18px;
+  width: 9px;
+  height: 19px;
+}
+
+.social__icon--facebook {
+  top: 12px;
+  left: 18px;
+  width: 9px;
+  height: 19px;
+}
+
+.social__icon--youtube {
+  top: 15px;
+  left: 17px;
+  width: 15px;
+  height: 14px;
+}
+
+.copyright {
+  font-size: 0;
+  margin-top: 34px;
+}
+
+
+
+
+// ============================================
+// Картинка в начале страницы со слоганом
+// ============================================
+
+.intro {
+  background-color: rgb(40, 54, 69);
+  background-image: url(../img/bg-back-mobile@1x.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  color: rgb(255, 255, 255);
+  padding-top: 66px;
+}
+
+@media (min-width: 660px) {
+  .intro {
+    padding-top: 110px;
+    background-image: url(../img/bg-back-tablet@1x.jpg);
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5),
+(min-resolution: 144dpi),
+(min-resolution: 1.5dppx) {
+  .intro {
+    background-image: url(../img/bg-back-mobile@2x.jpg);
+    background-size: 700px auto;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 660px),
+(min-resolution: 144dpi) and (min-width: 660px),
+(min-resolution: 1.5dppx) and (min-width: 660px) {
+  .intro {
+    background-image: url(../img/bg-back-tablet@2x.jpg);
+    background-size: 1200px auto;
+  }
+}
+
+
+
+// ============================================
+// Начало @media 660
+// ============================================
+
+
+@media (min-width: 660px) {
+  .intro__inner {
+    width: 660px;
+    height: 100%;
+  }
+
+  .intro__inner--inner {
+    padding-top: 69px;
+    padding-bottom: 69px;
+    min-height: 330px;
+  }
+
+  .intro__title {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .contest {
+    padding-top: 92px;
+  }
+
+  .contest__lead {
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-bottom: 60px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .contest__inner,
+  .contest__lead {
+    width: 660px;
+  }
+
+  .form {
+    padding-bottom: 50px;
+  }
+
+  .form__fieldset {
+    padding: 0;
+    margin-bottom: 65px;
+    border: 2px solid rgb(229, 229, 229);
+    border-radius: 2px;
+  }
+
+  .form__fieldset--fullname {
+    -ms-flex-order: -3;
+    order: -3;
+    padding: 0;
+    border: 0;
+  }
+
+  .form__field-text--fullname {
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 52px;
+  }
+
+  .form__text-label--fullname {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+
+  .form__text-label+.form__input-wrapper,
+  .form__text-label+.form__text-input {
+    margin-top: 0;
+  }
+
+  .form__fieldset {
+    padding: 0;
+    margin-bottom: 65px;
+    border: 2px solid rgb(229, 229, 229);
+    border-radius: 2px;
+  }
+
+  .form__fieldset--achievements {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .form__title {
+    position: relative;
+    top: -10px;
+    left: 50%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 32px;
+    margin: 0;
+    width: auto;
+    background-color: rgb(255, 255, 255);
+    transform: translateX(-50%);
+  }
+
+  .form__checkbox-fields {
+    padding: 27px 58px 47px;
+  }
+
+  .form__checkbox-wrapper:not(:last-child) {
+    margin-bottom: 43px;
+  }
+
+  .form__checkbox-label {
+    padding-left: 59px;
+  }
+
+  .form__fieldset {
+    padding: 0;
+    margin-bottom: 65px;
+    border: 2px solid rgb(229, 229, 229);
+    border-radius: 2px;
+  }
+
+  .form__fieldset--contacts {
+    -ms-flex-order: -1;
+    order: -1;
+    padding-top: 0;
+  }
+
+  .form__title {
+    position: relative;
+    top: -10px;
+    left: 50%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 32px;
+    margin: 0;
+    width: auto;
+    background-color: rgb(255, 255, 255);
+    transform: translateX(-50%);
+  }
+
+  .form__text-fields--contacts {
+    padding: 22px 58px 0;
+  }
+
+  .form__field-text--contacts {
+    position: relative;
+    margin: 0;
+    padding-bottom: 28px;
+  }
+
+  .form__text-label--contacts {
+    margin-left: 20px;
+    margin-top: 10px;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+
+  .form__text-label+.form__input-wrapper,
+  .form__text-label+.form__text-input {
+    margin-top: 0;
+  }
+
+  .form__input-wrapper--contacts::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 62px;
+    height: 100%;
+    border: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  .form__input-wrapper--email::before {
+    background: rgb(229, 229, 229) url(../img/icon-mail.svg) no-repeat center;
+    background-size: 18px 13px;
+  }
+
+
+
+
+
+  .form__fieldset {
+    padding: 0;
+    margin-bottom: 65px;
+    border: 2px solid rgb(229, 229, 229);
+    border-radius: 2px;
+  }
+
+  .form__fieldset--apps {
+    background-color: rgba(0, 0, 0, 0);
+    -ms-flex-order: -2;
+    order: -2;
+  }
+
+  .form__title {
+    position: relative;
+    top: -10px;
+    left: 50%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 32px;
+    margin: 0;
+    width: auto;
+    background-color: rgb(255, 255, 255);
+    transform: translateX(-50%);
+  }
+
+  .form__title--apps {
+    padding: 0 24px;
+  }
+
+  .form__radio-fields {
+    padding: 30px 58px 52px;
+  }
+
+  .form__radio-label {
+    padding-left: 59px;
+  }
+}
+
+@media (max-width: 960px) {
+  .form__checkbox-wrapper:not(:last-child) {
+    margin-bottom: 43px;
+  }
+}
