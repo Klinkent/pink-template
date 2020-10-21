@@ -383,6 +383,18 @@ select {
   }
 }
 
+/// ааааааа aaaaa
+@media (max-width: 659px) {
+
+  .form__fieldset-inner,
+  .form__title {
+    width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+  }
+}
+
 .form {
   margin: 0;
   padding-top: 10px;
@@ -413,18 +425,9 @@ select {
   }
 }
 
-.form__fieldset-inner,
-.form__title {
-  width: 320px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 0 auto;
-}
-
 .form__fieldset--achievements {
   background-color: rgb(242, 242, 242);
 }
-
 
 .form__field-text {
   display: -ms-flexbox;
@@ -459,6 +462,10 @@ select {
   line-height: 30px;
   color: rgb(40, 54, 69);
   outline: 0;
+}
+
+.form__input-wrapper {
+  position: relative;
 }
 
 .form__text-label+.form__input-wrapper,
@@ -595,18 +602,6 @@ select {
   margin-bottom: 43px;
 }
 
-
-@media (max-width: 659px) {
-
-  .form__fieldset-inner,
-  .form__title {
-    width: 320px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: 0 auto;
-  }
-}
-
 .form__radio-fields {
   padding-top: 20px;
 }
@@ -692,17 +687,6 @@ select {
   line-height: 18px;
   font-weight: 400;
   text-transform: uppercase;
-}
-
-@media (max-width: 659px) {
-
-  .form__fieldset-inner,
-  .form__title {
-    width: 320px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: 0 auto;
-  }
 }
 
 @media (max-width: 659px) {
@@ -951,7 +935,6 @@ select {
 // Начало @media 660
 // ============================================
 
-
 @media (min-width: 660px) {
   .intro__inner {
     width: 660px;
@@ -1022,13 +1005,6 @@ select {
     margin-top: 0;
   }
 
-  .form__fieldset {
-    padding: 0;
-    margin-bottom: 65px;
-    border: 2px solid rgb(229, 229, 229);
-    border-radius: 2px;
-  }
-
   .form__fieldset--achievements {
     background-color: rgba(0, 0, 0, 0);
   }
@@ -1058,12 +1034,6 @@ select {
     padding-left: 59px;
   }
 
-  .form__fieldset {
-    padding: 0;
-    margin-bottom: 65px;
-    border: 2px solid rgb(229, 229, 229);
-    border-radius: 2px;
-  }
 
   .form__fieldset--contacts {
     -ms-flex-order: -1;
@@ -1123,17 +1093,6 @@ select {
     background-size: 18px 13px;
   }
 
-
-
-
-
-  .form__fieldset {
-    padding: 0;
-    margin-bottom: 65px;
-    border: 2px solid rgb(229, 229, 229);
-    border-radius: 2px;
-  }
-
   .form__fieldset--apps {
     background-color: rgba(0, 0, 0, 0);
     -ms-flex-order: -2;
@@ -1164,6 +1123,31 @@ select {
   .form__radio-label {
     padding-left: 59px;
   }
+
+
+  @media (min-width: 660px) {
+    .form__input-wrapper--contacts::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 62px;
+      height: 100%;
+      border: 0;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+  }
+
+  .form__input-wrapper--phone::before {
+    background: rgb(229, 229, 229) url(../img/icon-phone.svg) no-repeat center;
+    background-size: 20px 19px;
+  }
+
+  .form__input-wrapper--contacts {
+    padding-right: 62px;
+  }
+
 }
 
 @media (max-width: 960px) {
