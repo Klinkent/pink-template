@@ -44,7 +44,6 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
-
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
 ul[class],
 ol[class] {
@@ -723,94 +722,8 @@ svg:not(:root) {
   width: 50%;
 }
 
-.photo-editor__range-btn {
-  position: absolute;
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 2px solid rgb(210, 40, 86);
-  border-radius: 50%;
-  background-color: rgb(255, 255, 255);
-  cursor: pointer;
-  outline: 0;
-}
-
 // ============================================
-// Кнопки под регулировщиком
-// ============================================
-
-.photo-editor__btns {
-  position: relative;
-  padding-top: 38px;
-}
-
-@media (max-width: 659px) {
-  .photo-editor__btns::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -1px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: rgb(221, 223, 224);
-  }
-}
-
-@media (max-width: 659px) {
-  .photo-editor__btns-inner {
-    width: 320px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: 0 auto;
-  }
-}
-
-.btn {
-  display: inline-block;
-  vertical-align: top;
-  padding: 15px 30px 16px;
-  border: 0;
-  font-family: "Open Sans", "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 18px;
-  font-weight: 700;
-  text-align: center;
-  text-decoration: none;
-  outline: 0;
-  cursor: pointer;
-}
-
-.btn--upload {
-  border: 3px solid rgb(210, 40, 86);
-  border-radius: 30px;
-  color: rgb(210, 40, 86);
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.btn--cancel {
-  border: 3px solid rgb(40, 54, 69);
-  border-radius: 30px;
-  color: rgb(40, 54, 69);
-  background-color: rgba(0, 0, 0, 0);
-  opacity: .1;
-}
-
-.photo-editor__upload-btn {
-  width: 100%;
-  margin-bottom: 12px;
-}
-
-.photo-editor__cancel-btn {
-  width: 100%;
-}
-
-// ============================================
-// Футер (перенести)
+// Навигация
 // ============================================
 
 .page-footer__wrapper {
