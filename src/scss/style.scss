@@ -368,11 +368,11 @@ select {
 	text-align: center;
 }
 
-.gallery__lead > :last-child {
+.gallery__lead> :last-child {
 	margin-bottom: 0;
 }
 
-.gallery__lead > :first-child {
+.gallery__lead> :first-child {
 	margin-top: 0;
 }
 
@@ -459,11 +459,11 @@ img {
 	flex-grow: 1;
 }
 
-.post__text > :last-child {
+.post__text> :last-child {
 	margin-bottom: 0;
 }
 
-.post__text > :first-child {
+.post__text> :first-child {
 	margin-top: 0;
 }
 
@@ -576,11 +576,11 @@ img {
 	margin: 0 auto 42px;
 }
 
-.photo-upload__lead > :last-child {
+.photo-upload__lead> :last-child {
 	margin-bottom: 0;
 }
 
-.photo-upload__lead > :first-child {
+.photo-upload__lead> :first-child {
 	margin-top: 0;
 }
 
@@ -825,6 +825,7 @@ svg:not(:root) {
 }
 
 @media (max-width: 659px) {
+
 	.form__footer,
 	.page-footer__wrapper {
 		text-align: center;
@@ -1041,10 +1042,6 @@ svg:not(:root) {
 		height: 300px;
 	}
 
-	.post__body {
-		padding: 24px 31px 22px 28px;
-	}
-
 	.post--card {
 		width: 300px;
 		min-height: 455px;
@@ -1241,7 +1238,6 @@ svg:not(:root) {
 
 	.post--panorama {
 		margin-bottom: 50px;
-		height: 506px;
 	}
 
 	.post__panorama-rubric {
@@ -1286,6 +1282,10 @@ svg:not(:root) {
 
 	.post--card:nth-child(2n) {
 		margin-right: 20px;
+	}
+
+	.post--card:nth-child(3n) {
+		margin-right: 0;
 	}
 
 	.photo-upload {
@@ -1430,8 +1430,8 @@ svg:not(:root) {
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 660px),
-	(min-resolution: 144dpi) and (min-width: 660px),
-	(min-resolution: 1.5dppx) and (min-width: 660px) {
+(min-resolution: 144dpi) and (min-width: 660px),
+(min-resolution: 1.5dppx) and (min-width: 660px) {
 	.intro {
 		background-image: url(../img/bg-back-tablet@2x.jpg);
 		background-size: 1200px auto;
